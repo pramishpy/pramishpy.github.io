@@ -351,6 +351,28 @@ header {
     border-radius: 10px;
 }
 
+/* Illustrative Skill Level Widths - Adjust as desired */
+.skill-level.java { width: 85%; }
+.skill-level.python { width: 90%; }
+.skill-level.javascript { width: 80%; }
+.skill-level.cpp { width: 75%; }
+.skill-level.html-css { width: 95%; }
+.skill-level.flask { width: 70%; }
+.skill-level.pytorch { width: 75%; }
+.skill-level.cuda { width: 80%; }
+.skill-level.visual-studio { width: 85%; }
+.skill-level.git-github { width: 90%; }
+.skill-level.leetcode { width: 80%; }
+
+/* Remove or comment out unused skill classes if any, for example: */
+/* .skill-level.react { width: 65%; } */
+/* .skill-level.nodejs { width: 60%; } */
+/* .skill-level.azure-fundamentals { width: 70%; } */
+/* .skill-level.azure-app-service { width: 65%; } */
+/* .skill-level.docker { width: 60%; } */
+/* .skill-level.database { width: 75%; } */
+/* .skill-level.problem-solving { width: 85%; } */
+
 /* Projects Section */
 .project-filters {
     display: flex;
