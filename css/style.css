@@ -548,6 +548,30 @@ footer {
     text-align: center;
 }
 
+.btn-bmc {
+    background-color: #FFDD00; /* Buy Me A Coffee yellow */
+    color: #000000; /* Black text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex; /* To align icon and text */
+    align-items: center; /* To align icon and text */
+    gap: 8px; /* Space between icon and text */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-bmc:hover {
+    background-color: #e6c600; /* Darker yellow on hover */
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-bmc i {
+    font-size: 1.1em;
+}
+
 /* Add this to your existing CSS file */
 
 .resume-buttons {
