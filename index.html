@@ -329,5 +329,25 @@
     </footer>
 
     <script src="js/script.js"></script>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Chat with me!</h3>
+            <button class="chatbot-close-btn">&times;</button>
+        </div>
+        <div class="chatbot-messages">
+            <!-- Messages will be appended here by JavaScript -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-user-input" placeholder="Ask a question...">
+            <button id="chatbot-send-btn">Send</button>
+        </div>
+    </div>
+    <button class="chatbot-toggler" aria-label="Toggle chat window">
+        <i class="fas fa-comment-dots" aria-hidden="true"></i>
+    </button>
+
+    <script src="js/chatbot.js"></script>
 </body>
 </html>
