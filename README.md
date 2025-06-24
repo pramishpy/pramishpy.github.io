@@ -44,18 +44,6 @@ To run this website locally:
 2.  **Open `index.html` in your browser:**
     You can simply open the `index.html` file directly in your web browser.
 
-3.  **Using a local server (optional but recommended for full functionality):**
-    If you have Python installed, you can run a simple HTTP server from the project's root directory:
-    ```bash
-    python -m http.server
-    ```
-    Then, open `http://localhost:8000` (or the port specified) in your browser.
-
-    Alternatively, you can use the `server.py` script included in this repository:
-    ```bash
-    python server.py
-    ```
-    This will also start a local server and attempt to open the site in your default browser.
 
 ## File Structure
 
