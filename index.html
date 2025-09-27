@@ -3,169 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pramish Pandey | Computer Science Student</title>
+    <title>Pramish Pandey - Computer Science Student Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <nav id="navbar">
-                <h1 class="logo">Pramish Pandey</h1>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Pramish Pandey</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hello, I'm <span class="highlight">Pramish Pandey</span></h1>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Pramish Pandey</h1>
                 <h2>Computer Science Student</h2>
-                <p>Currently pursuing my Bachelor's in Computer Science</p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn">Contact Me</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                <p>Dedicated student pursuing a career in software development, artificial intelligence, and machine learning. Currently exploring CUDA frameworks and building web applications that solve real-world problems.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn primary">Get In Touch</a>
+                    <a href="#projects" class="btn outline">View Projects</a>
                 </div>
             </div>
+            <div class="hero-visual">
+                <div class="physics-animation">
+                    <div class="atom">
+                        <div class="nucleus"></div>
+                        <div class="electron-orbit orbit-1">
+                            <div class="electron"></div>
+                        </div>
+                        <div class="electron-orbit orbit-2">
+                            <div class="electron"></div>
+                        </div>
+                        <div class="electron-orbit orbit-3">
+                            <div class="electron"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+                <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-image">
-                    <img src="images/profile.jpeg" alt="Pramish Pandey" id="profile-image">
-                </div>
                 <div class="about-text">
-                    <h3>Who am I?</h3>
-                    <p>I am a dedicated student in CS hoping to pursue a career in software development, artificial intelligence, and ML. I am currently actively learning the CUDA frameworks and am involved in projects surrounding it. Along with that, I have been building web based applications that help solve real-world problems. I hope to learn more and build my skill set.</p>
-                    <div class="personal-info">
-                        <div class="info-item">
-                            <span class="info-title">Name:</span>
-                            <span class="info-value">Pramish Pandey</span>
+                    <p>I am a dedicated student in Computer Science hoping to pursue a career in software development, artificial intelligence, and machine learning. I am currently actively learning the CUDA frameworks and am involved in projects surrounding it.</p>
+                    
+                    <p>Along with that, I have been building web-based applications that help solve real-world problems. I hope to learn more and build my skill set through hands-on projects and continuous learning in emerging technologies.</p>                    <div class="stats">
+                        <div class="stat">
+                            <h3>4.0</h3>
+                            <p>GPA</p>
                         </div>
-                        <div class="info-item">
-                            <span class="info-title">Email:</span>
-                            <span class="info-value">pramish.pandey@usm.edu</span>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Projects</p>
                         </div>
-                        <div class="info-item">
-                            <span class="info-title">Status:</span>
-                            <span class="info-value">Junior Year Student</span>
+                        <div class="stat">
+                            <h3>Junior</h3>
+                            <p>Year Student</p>
                         </div>
-                    </div>
-                    <div class="resume-buttons">
-                        <a href="resources/resume.pdf" class="btn btn-view" target="_blank" rel="noopener">View Resume <i class="fas fa-external-link-alt"></i></a>
+                        <div class="stat">
+                            <h3>4</h3>
+                            <p>Programming Languages</p>
+                        </div>
                     </div>
                 </div>
+                <div class="about-image">
+                    <img src="images/pramish-pandey-profile.jpg" alt="Pramish Pandey" class="profile-photo">
+                    </div>
+                    
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="education">
+    <section id="education" class="section">
         <div class="container">
             <h2 class="section-title">Education</h2>
-            <div class="timeline">
+            <div class="education-timeline">
                 <div class="timeline-item">
-                    <div class="date">Jan 2024 – Current</div>
-                    <h3>Bachelor of Science in Computer Science</h3>
-                    <p>The University of Southern Mississippi</p>
-                    <p>GPA: 4.0/4.0</p>
-                    <p>Relevant Coursework: Software Development Foundations, Secure Software Development, DBMS Design, Project Management, Data Structures and Algorithms, Intro to AI, Computer Systems and Networks, Discrete Math, Differential Equations, Linear Algebra, Probability and Statistics I</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="date">Aug 2020 – Aug 2022</div>
-                    <h3>Cambridge AS and A Levels</h3>
-                    <p>Xavier International College</p>
-                    <p>GPA: 4.0/4.0</p>
-                    <p>Coursework: Computer Science, Mathematics, English, Physics</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-name">C++</div>
-                            <div class="skill-bar">
-                                <div class="skill-level cpp"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Python</div>
-                            <div class="skill-bar">
-                                <div class="skill-level python"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">JavaScript</div>
-                            <div class="skill-bar">
-                                <div class="skill-level javascript"></div>
-                            </div>
-                        </div>
-                         <div class="skill-item">
-                            <div class="skill-name">Java</div>
-                            <div class="skill-bar">
-                                <div class="skill-level java"></div>
-                            </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <h4>The University of Southern Mississippi</h4>
+                        <span class="timeline-date">Jan 2024 - Current</span>
+                        <p>Relevant Coursework: Software Development Foundations, Secure Software Development, DBMS Design, Project Management, Data Structures and Algorithms, Intro to AI, Computer Systems and Networks, Discrete Math, Differential Equations, Linear Algebra, Probability and Statistics I</p>
+                        <div class="achievements">
+                            <span class="achievement">GPA: 4.0/4.0</span>
+                            <span class="achievement">Junior Year Student</span>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Web Technologies</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-name">HTML & CSS</div>
-                            <div class="skill-bar">
-                                <div class="skill-level html-css"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Flask</div>
-                            <div class="skill-bar">
-                                <div class="skill-level flask"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>AI/ML & Data Science</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-name">PyTorch</div>
-                            <div class="skill-bar">
-                                <div class="skill-level pytorch"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">CUDA</div>
-                            <div class="skill-bar">
-                                <div class="skill-level cuda"></div>
-                            </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Cambridge AS and A Levels</h3>
+                        <h4>Xavier International College</h4>
+                        <span class="timeline-date">Aug 2020 - Aug 2022</span>
+                        <p>Coursework: Computer Science, Mathematics, English, Physics</p>
+                        <div class="achievements">
+                            <span class="achievement">GPA: 4.0/4.0</span>
+                            <span class="achievement">Computer Science Focus</span>
                         </div>
                     </div>
                 </div>
@@ -174,67 +140,204 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web Dev</button>
-                <button class="filter-btn" data-filter="app">App Dev</button>
-                <button class="filter-btn" data-filter="ai">AI/ML</button>
-                <button class="filter-btn" data-filter="other">Other</button>
-            </div>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card" data-category="web">
-                    <div class="project-img">
-                        <img src="images/mentally.jpg" alt="Mentally: AR for Mental Health">
-                    </div>
-                    <div class="project-info">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-brain"></i>
                         <h3>Mentally: Reducing Mental Health Stigma Using AR</h3>
-                        <p>Developed a web app that uses AR (underdeveloped) and other simulations to help reduce stigmas related to mental health. Tools Used: Flask, Python, HTML, CSS, JavaScript.</p>
-                        <div class="project-links">
-                            <a href="https://mentally.pramishpandey.com.np" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Website</a>
-                        </div>
+                    </div>
+                    <p>Developed a web app that uses AR and other simulations to help reduce stigmas related to mental health, providing interactive experiences and resources.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://mentally.pramishpandey.com.np/" class="project-link"><i class="fas fa-external-link-alt"></i> Website</a>
                     </div>
                 </div>
-                <div class="project-card" data-category="app"> 
-                    <div class="project-img">
-                        <img src="images/ms-license-test.jpg" alt="Mississippi License Test">
-                    </div>
-                    <div class="project-info">
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-car"></i>
                         <h3>Mississippi License Test</h3>
-                        <p>A web app that has resources on how to pass the computerized license test of Mississippi. Tools Used: JavaScript, HTML, CSS.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/pramishpy/mississippi-license-practice-tests" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://pramishpy.github.io/mississippi-license-practice-tests/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Website</a>
-                        </div>
+                    </div>
+                    <p>A web app that has resources on how to pass the computerized license test of Mississippi, featuring practice tests and study materials.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/pramishpy/mississippi-license-practice-tests" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://pramishpy.github.io/mississippi-license-practice-tests/" class="project-link"><i class="fas fa-external-link-alt"></i> Website</a>
                     </div>
                 </div>
-                <div class="project-card" data-category="ai">
-                    <div class="project-img">
-                        <img src="images/digital-galatea.jpg" alt="Digital Galatea 2025">
-                    </div>
-                    <div class="project-info">
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-robot"></i>
                         <h3>Digital Galatea 2025</h3>
-                        <p>Built a web app that attempts to replicate human emotions while conversing with an AI chat bot. Tools Used: Gemini API, Python, HTML, CSS, JavaScript.</p>
-                        <div class="project-links">
-                           
-                              <a href="https://github.com/pramishpy/Digital-Galatea" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-                              <a href="http://pramishpandey.com.np/Digital-Galatea/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Website</a>
+                    </div>
+                    <p>Built a web app that attempts to replicate human emotions while conversing with an AI chat bot, creating more engaging AI interactions.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Gemini API</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/pramishpy/Digital-Galatea" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://pramishpandey.com.np/Digital-Galatea/" class="project-link"><i class="fas fa-external-link-alt"></i> Website</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-code"></i>
+                        <h3>CodeBusters</h3>
+                    </div>
+                    <p>An interactive web platform designed to help users learn programming concepts from beginner to advanced levels, featuring lessons, coding exercises, and curated resources.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Skulpt</span>
+                        <span class="tech-tag">PrismJS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/pramishpy/CodeBusters" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://pramishpandey.com.np/CodeBusters/" class="project-link"><i class="fas fa-external-link-alt"></i> Website</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="web">
-                    <div class="project-img">
-                        <img src="images/codebusters.png" alt="Codebusters Project">
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Web Technologies</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">HTML & CSS</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Database Design</span>
+                        <span class="skill-tag">Web Security</span>
+                        <span class="skill-tag">Responsive Design</span>
                     </div>
-                    <div class="project-info">
-                        <h3>CodeBusters</h3>
-                        <p>An interactive web platform designed to help users learn programming concepts from beginner to advanced levels, featuring lessons, coding exercises (with in-browser Python execution using Skulpt), and curated resources. Tools Used: HTML, CSS, JavaScript, Skulpt, PrismJS.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/pramishpy/CodeBusters" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://pramishpandey.com.np/CodeBusters/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Website</a>
-                        </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Software & Tools</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Postman</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI/ML & Data Science</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">CUDA</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Neural Networks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2 class="section-title">Research & Publications</h2>
+            <div class="research-content">
+                <div class="research-interests">
+                    <h3>Research Interests</h3>
+                    <ul>
+                        <li>Artificial Intelligence and Machine Learning</li>
+                        <li>CUDA Framework and GPU Computing</li>
+                        <li>Web Application Development</li>
+                        <li>Software Engineering and Architecture</li>
+                        <li>Human-Computer Interaction</li>
+                    </ul>
+                </div>
+
+                <div class="publications">
+                    <h3>Academic Projects & Presentations</h3>
+                    <div class="publication-item">
+                        <h4>"Web-Based AR Mental Health Platform"</h4>
+                        <p class="publication-details">P. Pandey | <em>Class Project 2024</em></p>
+                        <p>Developed innovative web application combining AR technology with mental health awareness to reduce stigma.</p>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <h4>"Interactive Programming Learning Platform"</h4>
+                        <p class="publication-details">P. Pandey | <em>CodeBusters Project 2024</em></p>
+                        <p>Created comprehensive web platform for programming education with in-browser code execution capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="current-research">
+                    <h3>Current Focus</h3>
+                    <div class="research-project">
+                        <h4>CUDA Framework Development</h4>
+                        <p>Currently actively learning CUDA frameworks and working on projects involving GPU computing and parallel processing optimization.</p>
                     </div>
                 </div>
             </div>
@@ -242,65 +345,68 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>pramish.pandey@usm.edu</p>
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in discussing physics, research opportunities, or potential collaborations. Feel free to reach out!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>pramish.pandey@usm.edu</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (601) 913-3119</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hattiesburg, Mississippi, USA</span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p>+1 (601) 913-3119</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>Hattiesburg, Mississippi, USA</p>
-                        </div>
-                    </div>
+
                     <div class="social-links">
-                        <a href="https://linkedin.com/in/pramishpy" class="social-link" title="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
-                        <a href="https://github.com/pramishpy" class="social-link" title="GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span></a>
-                        <a href="https://twitter.com/pramishpy" class="social-link" title="Twitter Profile"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
-                        <a href="https://buymeacoffee.com/pramishpang" class="social-link" title="Buy Me A Coffee" target="_blank" rel="noopener"><i class="fas fa-mug-hot" aria-hidden="true"></i><span class="sr-only">Buy Me A Coffee</span></a>
+                        <a href="https://linkedin.com/in/pramishpy" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/pramishpy" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/pramishpy" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://buymeacoffee.com/pramishpang" class="social-link" title="Buy Me A Coffee"><i class="fas fa-coffee"></i></a>
                     </div>
                 </div>
+
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/xeokqyzy" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/xeokqyzy" method="POST">
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
-                        
-                        <button type="submit" class="btn btn-submit">Send Message</button>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Pramish Pandey. All Rights Reserved.</p>
-                <div class="footer-bmc-container">
-                    <a href="https://buymeacoffee.com/pramishpang" target="_blank" rel="noopener" class="btn btn-bmc">
-                        <i class="fas fa-mug-hot"></i> Buy Me a Coffee
-                    </a>
-                </div>
+                <p>&copy; 2025 Pramish Pandey. All rights reserved.</p>
+                <p>Built with passion for computer science and web development.</p>
             </div>
         </div>
     </footer>
