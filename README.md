@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website designed specifically for computer science students to showcase their academic achievements, software projects, and technical skills.
 
-## 🌟 Features
+##  Features
 
 ### Design & User Experience
 - **Modern, Tech-Themed Design**: Clean, professional layout with computer science-inspired color scheme and animations
@@ -28,7 +28,7 @@ A modern, responsive portfolio website designed specifically for computer scienc
 - **Performance Optimized**: Throttled scroll events and lazy loading
 - **Cross-Browser Compatible**: Works across modern browsers
 
-## 🚀 Quick Start
+##  Quick Start
 
 1. **Clone or Download**: Get the portfolio files to your local machine
 2. **Customize Content**: Edit the HTML file to add your personal information
@@ -36,7 +36,7 @@ A modern, responsive portfolio website designed specifically for computer scienc
 4. **Update Projects**: Modify the projects section with your actual work
 5. **Deploy**: Upload to your preferred hosting service
 
-## 📁 File Structure
+##  File Structure
 
 ```
 physics-portfolio/
@@ -49,7 +49,7 @@ physics-portfolio/
 └── README.md           # This file
 ```
 
-## 🎨 Customization Guide
+##  Customization Guide
 
 ### Personal Information
 Edit the following sections in `index.html`:
@@ -89,14 +89,14 @@ Update the project cards with your actual GitHub repositories and live demos:
 </a>
 ```
 
-## 📱 Responsive Design
+##  Responsive Design
 
 The website is fully responsive with breakpoints at:
 - **Desktop**: 1200px and above
 - **Tablet**: 768px - 1199px
 - **Mobile**: Below 768px
 
-## 🔧 Browser Support
+##  Browser Support
 
 - Chrome (recommended)
 - Firefox
@@ -104,7 +104,7 @@ The website is fully responsive with breakpoints at:
 - Edge
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## 📊 Performance Features
+##  Performance Features
 
 - Optimized animations using CSS transforms
 - Throttled scroll event handlers
@@ -112,7 +112,7 @@ The website is fully responsive with breakpoints at:
 - Minimal external dependencies
 - Compressed and optimized code
 
-## 🎯 Physics-Specific Features
+##  Physics-Specific Features
 
 ### Academic Focus
 - Education timeline with GPA and coursework
@@ -135,7 +135,7 @@ The portfolio includes sample projects relevant to physics students:
 - Statistical Mechanics Monte Carlo
 - Solar System Simulation
 
-## 📝 Customization Checklist
+##  Customization Checklist
 
 - [ ] Update personal information in hero section
 - [ ] Add your photo to about section
@@ -148,7 +148,7 @@ The portfolio includes sample projects relevant to physics students:
 - [ ] Validate HTML and CSS
 - [ ] Test contact form functionality
 
-## 🚀 Deployment Options
+##  Deployment Options
 
 ### Free Hosting Services
 - **GitHub Pages**: Perfect for GitHub users
@@ -162,7 +162,7 @@ The portfolio includes sample projects relevant to physics students:
 3. Enable GitHub Pages in repository settings
 4. Your site will be available at `https://username.github.io`
 
-## 🤝 Contributing
+##  Contributing
 
 If you find bugs or have suggestions for improvements:
 1. Fork the repository
@@ -170,18 +170,14 @@ If you find bugs or have suggestions for improvements:
 3. Make your changes
 4. Submit a pull request
 
-## 📄 License
+##  License
 
 This project is open source and available under the MIT License.
 
-## 🆘 Support
+##  Support
 
 If you need help customizing your portfolio:
 1. Check the comments in the code files
 2. Review this README thoroughly
 3. Test your changes in a local browser first
 4. Validate your HTML/CSS using online validators
-
----
-
-**Built with ❤️ for physics students ready to showcase their work to the world!**
