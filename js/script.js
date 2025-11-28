@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypewriter();
     initParticleBackground();
     initMobileMenu();
+    fetchGitHubStats();
 });
 
 // Navigation functionality
@@ -564,3 +565,27 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingObserver.observe(section);
     });
 });
+
+// Fetch GitHub Statistics
+function fetchGitHubStats() {
+    const githubUrl = 'https://api.github.com/users/pramishpy';
+    fetch(githubUrl)
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+            const repoCountElement = document.getElementById('github-repos-count');
+            if (repoCountElement) {
+                repoCountElement.textContent = data.public_repos;
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching GitHub stats:', error);
+            // Fallback to the manual "12+" if API fails
+            const repoCountElement = document.getElementById('github-repos-count');
+            if (repoCountElement) {
+                repoCountElement.textContent = '12+';
+            }
+        });
+}
