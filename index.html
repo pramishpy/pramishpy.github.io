@@ -20,6 +20,7 @@
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
                 <a href="#education" class="nav-link">Education</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#skills" class="nav-link">Skills</a>
@@ -40,8 +41,8 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Pramish Pandey</h1>
-                <h2>Computer Science Student</h2>
-                <p>Dedicated student pursuing a career in software development, artificial intelligence, and machine learning. Building web applications that solve real-world problems.</p>
+                <h2>Full Stack Software Engineer & Computer Science Student</h2>
+                <p>Full-stack software development engineer building research platforms and web applications. Specializing in Django, React, Qt 6, and data science technologies. Passionate about creating scalable solutions that solve real-world problems.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn primary">Get In Touch</a>
                     <a href="#projects" class="btn outline">View Projects</a>
@@ -76,15 +77,15 @@
                 <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I am a dedicated student in Computer Science hoping to pursue a career in software development, artificial intelligence, and machine learning. I am passionate about building innovative solutions and contributing to cutting-edge technologies.</p>
+                    <p>I am a Full Stack Software Development Engineer at the School of Polymer Science & Engineering, where I engineer research platforms using Django, React, and PostgreSQL to automate data analysis for hundreds of polymer samples. As a Computer Science student at The University of Southern Mississippi, I maintain a 4.0 GPA and have been recognized on the President's List for three consecutive semesters.</p>
                     
-                    <p>I have been building web-based applications that help solve real-world problems. I hope to learn more and build my skill set through hands-on projects and continuous learning in emerging technologies.</p>                    <div class="stats">
+                    <p>My work spans full-stack development, desktop application engineering with C++ and Qt 6, and data science visualization. I am passionate about building scalable, user-focused solutions that bridge cutting-edge research with practical software engineering.</p>                    <div class="stats">
                         <div class="stat">
                             <h3>4.0</h3>
                             <p>GPA</p>
                         </div>
                         <div class="stat">
-                            <h3>10+</h3>
+                            <h3>12+</h3>
                             <p>Projects</p>
                         </div>
                         <div class="stat">
@@ -92,8 +93,8 @@
                             <p>Year Student</p>
                         </div>
                         <div class="stat">
-                            <h3>4</h3>
-                            <p>Programming Languages</p>
+                            <h3>150+</h3>
+                            <p>Students Mentored</p>
                         </div>
                         <div class="stat">
                             <h3 id="github-repos-count">0</h3>
@@ -109,6 +110,36 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer</h3>
+                        <h4>School of Polymer Science & Engineering, The University of Southern Mississippi</h4>
+                        <span class="timeline-date">September 2025 - Present</span>
+                        <p>Engineering a full-stack research platform with Django, Django REST Framework, PostgreSQL (JSONField), React (Vite), Recharts, Plotly.js, Pillow, NumPy, pandas, and openpyxl, automating ingestion and analysis for hundreds of polymer samples and thousands of AFM/GISAXS images, targeting real-time multi-metric comparisons and an 97% reduction in manual data entry.</p>
+                        <p>Designing 10+ REST API endpoints and interactive React dashboards, leveraging advanced image and metadata handling with Pillow, NumPy, and pandas, implementing robust bulk upload workflows, and applying best practices in component architecture, data visualization, and error handling to deliver research-focused user experiences.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Learning Assistant</h3>
+                        <h4>Center for Faculty Development, The University of Southern Mississippi</h4>
+                        <span class="timeline-date">August 2025 - Present</span>
+                        <p>Mentoring over 150 undergraduate students, improving their debugging efficiency and increasing project completion rates by 30%, while promoting best practices in Python, Java, and software development.</p>
+                        <p>Facilitating 40+ collaborative coding sessions on advanced topics such as object-oriented design and data structures, helping students achieve higher grades and strengthening foundational algorithmic problem-solving skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Education Section -->
     <section id="education" class="section">
         <div class="container">
@@ -119,11 +150,11 @@
                     <div class="timeline-content">
                         <h3>Bachelor of Science in Computer Science</h3>
                         <h4>The University of Southern Mississippi</h4>
-                        <span class="timeline-date">Jan 2024 - Current</span>
-                        <p>Relevant Coursework: Software Development Foundations, Secure Software Development, DBMS Design, Project Management, Data Structures and Algorithms, Intro to AI, Computer Systems and Networks, Discrete Math, Differential Equations, Linear Algebra, Probability and Statistics I</p>
+                        <span class="timeline-date">Jan 2024 - Present</span>
+                        <p>Relevant Coursework: Computer Systems, Computer Networks, Algorithms, Web Development, Cloud Computing, Data Center Networks, Machine Learning, Cybersecurity, Data Structures and Algorithms, Object-Oriented Programming, Database Management Systems, Secure Software Development</p>
                         <div class="achievements">
                             <span class="achievement">GPA: 4.0/4.0</span>
-                            <span class="achievement">Junior Year Student</span>
+                            <span class="achievement">President's List (Spring 2024, Fall 2024, Spring 2025)</span>
                         </div>
                     </div>
                 </div>
@@ -152,16 +183,38 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
+                        <i class="fas fa-microscope"></i>
+                        <h3>PolyVision: Cross-Platform App for Polymer Image Analysis & Visualization</h3>
+                    </div>
+                    <p>Engineering a cross-platform desktop application in modern C++ and Qt 6 for polymer image analysis and visualization, supporting advanced segmentation, synthetic image generation, and publication-ready chart exports for microscopy workflows.</p>
+                    <p>Architecting modular analysis pipelines with batch processing, plugin-ready extensibility, and interactive GUI built on MVC/MVVM design, leveraging CMake, Qt Charts/QCustomPlot, OpenCV, and integrated automated testing for robust and portable scientific software.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Qt 6</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">CMake</span>
+                        <span class="tech-tag">Qt Charts</span>
+                        <span class="tech-tag">MVC/MVVM</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/pramishpy/PolyVision" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
                         <i class="fas fa-brain"></i>
                         <h3>Mentally: Reducing Mental Health Stigma Using AR</h3>
                     </div>
-                    <p>Developed a web app that uses AR and other simulations to help reduce stigmas related to mental health, providing interactive experiences and resources.</p>
+                    <p>Designed, built and deployed an AWS hosted web application using Flask, A-Frame, AR.js, and Jinja2, delivering marker-based augmented reality (AR) experiences, interactive simulations, and empathy building modules for 100 to 300 unique users in a multiweek pilot.</p>
+                    <p>Developed immersive AR journeys and educational modules that increased myth-busting quiz scores by 25 to 35%, reduced stigmatizing beliefs by up to 25%, and achieved 40% AR tour completion and 3 to 5 minute average engagement sessions.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flask</span>
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">A-Frame</span>
+                        <span class="tech-tag">AR.js</span>
+                        <span class="tech-tag">Jinja2</span>
+                        <span class="tech-tag">AWS</span>
                     </div>
                     <div class="project-links">
                         <a href="https://mentally.pramishpandey.com.np/" class="project-link"><i class="fas fa-external-link-alt"></i> Website</a>
@@ -207,15 +260,16 @@
                 <div class="project-card">
                     <div class="project-header">
                         <i class="fas fa-microscope"></i>
-                        <h3>PolyVision</h3>
+                        <h3>PolyVision: Cross-Platform App for Polymer Image Analysis & Visualization</h3>
                     </div>
-                    <p>Cross-platform polymer image analysis application built with C++ and Qt 6, featuring advanced image processing algorithms for material science research and automated polymer structure detection.</p>
+                    <p>Engineering a cross-platform desktop application in modern C++ and Qt 6 for polymer image analysis and visualization, supporting advanced segmentation, synthetic image generation, and publication-ready chart exports for microscopy workflows. Architecting modular analysis pipelines with batch processing, plugin-ready extensibility, and interactive GUI built on MVC/MVVM design.</p>
                     <div class="project-tech">
                         <span class="tech-tag">C++</span>
                         <span class="tech-tag">Qt 6</span>
                         <span class="tech-tag">OpenCV</span>
-                        <span class="tech-tag">Image Processing</span>
-                        <span class="tech-tag">Cross-Platform</span>
+                        <span class="tech-tag">CMake</span>
+                        <span class="tech-tag">Qt Charts</span>
+                        <span class="tech-tag">QCustomPlot</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/pramishpy/PolyVision" class="project-link"><i class="fab fa-github"></i> GitHub</a>
@@ -253,32 +307,17 @@
             <h2 class="section-title">Skills & Technologies</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">C++</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="75%"></div>
-                            </div>
-                        </div>
+                    <h3><i class="fas fa-code"></i> Programming Languages & Core Technologies</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">CMake</span>
+                        <span class="skill-tag">GitHub Actions (CI/CD)</span>
+                        <span class="skill-tag">Qt Test (QTest)</span>
+                        <span class="skill-tag">GoogleTest</span>
                     </div>
                 </div>
 
@@ -287,8 +326,13 @@
                     <div class="skills-tags">
                         <span class="skill-tag">HTML & CSS</span>
                         <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Django REST Framework</span>
                         <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vite</span>
                         <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">ASP.NET</span>
                         <span class="skill-tag">REST APIs</span>
                         <span class="skill-tag">Database Design</span>
                         <span class="skill-tag">Web Security</span>
@@ -301,12 +345,17 @@
                     <div class="skills-tags">
                         <span class="skill-tag">Git & GitHub</span>
                         <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Qt Creator</span>
+                        <span class="skill-tag">CMake</span>
                         <span class="skill-tag">Docker</span>
                         <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">AWS (EC2, S3)</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">SQLite</span>
                         <span class="skill-tag">MongoDB</span>
                         <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">GitHub Actions (CI/CD)</span>
+                        <span class="skill-tag">WSGI</span>
                     </div>
                 </div>
 
@@ -317,9 +366,25 @@
                         <span class="skill-tag">Machine Learning</span>
                         <span class="skill-tag">Deep Learning</span>
                         <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">pandas</span>
+                        <span class="skill-tag">Pillow</span>
+                        <span class="skill-tag">OpenCV</span>
                         <span class="skill-tag">Data Analysis</span>
                         <span class="skill-tag">Neural Networks</span>
+                        <span class="skill-tag">MATLAB</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Visualization & AR/VR</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Plotly.js</span>
+                        <span class="skill-tag">Recharts</span>
+                        <span class="skill-tag">Qt Charts</span>
+                        <span class="skill-tag">QCustomPlot</span>
+                        <span class="skill-tag">A-Frame</span>
+                        <span class="skill-tag">AR.js</span>
+                        <span class="skill-tag">Data Visualization</span>
                     </div>
                 </div>
             </div>
@@ -335,18 +400,32 @@
                     <h3>Research Interests</h3>
                     <ul>
                         <li>Artificial Intelligence and Machine Learning</li>
+                        <li>CUDA Framework and GPU Computing</li>
                         <li>Web Application Development</li>
                         <li>Software Engineering and Architecture</li>
                         <li>Human-Computer Interaction</li>
+                        <li>Augmented Reality Applications</li>
                     </ul>
                 </div>
 
                 <div class="publications">
                     <h3>Academic Projects & Presentations</h3>
                     <div class="publication-item">
+                        <h4>"PolyVision: Cross-Platform Polymer Image Analysis System"</h4>
+                        <p class="publication-details">P. Pandey | <em>Research Project 2025</em></p>
+                        <p>Engineering cross-platform desktop application for polymer microscopy image analysis using C++, Qt 6, and OpenCV with advanced segmentation and visualization capabilities.</p>
+                    </div>
+
+                    <div class="publication-item">
+                        <h4>"Full-Stack Research Platform for Polymer Science"</h4>
+                        <p class="publication-details">P. Pandey | <em>USM School of Polymer Science 2025</em></p>
+                        <p>Developed comprehensive Django-React platform automating analysis of hundreds of polymer samples and thousands of microscopy images with 97% reduction in manual data entry.</p>
+                    </div>
+                    
+                    <div class="publication-item">
                         <h4>"Web-Based AR Mental Health Platform"</h4>
                         <p class="publication-details">P. Pandey | <em>Class Project 2024</em></p>
-                        <p>Developed innovative web application combining AR technology with mental health awareness to reduce stigma.</p>
+                        <p>Developed innovative web application combining AR technology with mental health awareness, achieving 25-35% improvement in myth-busting quiz scores and 40% AR tour completion rate.</p>
                     </div>
                     
                     <div class="publication-item">
@@ -359,40 +438,8 @@
                 <div class="current-research">
                     <h3>Current Focus</h3>
                     <div class="research-project">
-                        <h4>AI & Web Development</h4>
-                        <p>Currently focusing on artificial intelligence applications and building scalable web applications with modern frameworks and technologies.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership & Mentorship Section -->
-    <section id="leadership" class="section">
-        <div class="container">
-            <h2 class="section-title">Leadership & Mentorship</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Learning Assistant - Computer Science</h3>
-                        <p class="timeline-company">University of Southern Mississippi</p>
-                        <ul class="timeline-responsibilities">
-                            <li>Mentored 50+ students in introductory and intermediate computer science courses, providing one-on-one tutoring in Python, Java, and data structures</li>
-                            <li>Led weekly supplemental instruction sessions covering complex topics such as algorithms, object-oriented programming, and debugging techniques</li>
-                            <li>Developed and distributed study guides, practice problems, and educational resources that improved student comprehension and exam performance</li>
-                            <li>Collaborated with course instructors to identify common student challenges and created targeted interventions to address learning gaps</li>
-                            <li>Facilitated peer study groups and coding workshops, fostering a collaborative learning environment</li>
-                            <li>Received consistently positive feedback from students for clear explanations, patience, and dedication to their academic success</li>
-                        </ul>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">Mentorship</span>
-                            <span class="skill-tag">Teaching</span>
-                            <span class="skill-tag">Communication</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">Problem Solving</span>
-                        </div>
+                        <h4>CUDA Framework Development</h4>
+                        <p>Currently actively learning CUDA frameworks and working on projects involving GPU computing and parallel processing optimization.</p>
                     </div>
                 </div>
             </div>
@@ -411,7 +458,7 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>pramish.pandey@usm.edu</span>
+                            <span>official.pramish@gmail.com</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -428,7 +475,7 @@
                 </div>
 
                 <div class="contact-form">
-                    <form id="contact-form" action="https://formspree.io/f/xeokqyzy" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/xeokqyzy" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
