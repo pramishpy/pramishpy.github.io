@@ -9,9 +9,95 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypewriter();
     initParticleBackground();
     initMobileMenu();
-    initVisualLightbox();
+    initVisualGallery().finally(() => {
+        initVisualLightbox();
+    });
     fetchGitHubStats();
 });
+
+async function initVisualGallery() {
+    const gallery = document.getElementById('visuals-gallery');
+    if (!gallery) {
+        return;
+    }
+
+    const owner = gallery.dataset.githubOwner;
+    const repo = gallery.dataset.githubRepo;
+    const path = gallery.dataset.githubPath || 'images/visuals';
+    const ref = gallery.dataset.githubRef || 'main';
+
+    if (!owner || !repo) {
+        gallery.innerHTML = '<p class="visuals-gallery-loading">Gallery metadata is missing.</p>';
+        return;
+    }
+
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${encodeURIComponent(ref)}`;
+    const imageExtensions = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'avif']);
+    const videoExtensions = new Set(['mp4', 'webm', 'mov']);
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error(`Gallery fetch failed: ${response.status}`);
+        }
+
+        const files = await response.json();
+        if (!Array.isArray(files)) {
+            throw new Error('Unexpected gallery payload');
+        }
+
+        const mediaFiles = files
+            .filter(file => file.type === 'file')
+            .map(file => {
+                const extension = (file.name.split('.').pop() || '').toLowerCase();
+                if (imageExtensions.has(extension)) {
+                    return { ...file, mediaType: 'image', extension };
+                }
+                if (videoExtensions.has(extension)) {
+                    return { ...file, mediaType: 'video', extension };
+                }
+                return null;
+            })
+            .filter(Boolean)
+            .sort((a, b) => b.name.localeCompare(a.name, undefined, { numeric: true }));
+
+        gallery.innerHTML = '';
+
+        if (mediaFiles.length === 0) {
+            gallery.innerHTML = '<p class="visuals-gallery-loading">No visuals found yet.</p>';
+            return;
+        }
+
+        mediaFiles.forEach((file, index) => {
+            const figure = document.createElement('figure');
+            figure.className = 'media-item';
+
+            if (file.mediaType === 'image') {
+                const img = document.createElement('img');
+                img.src = `images/visuals/${encodeURIComponent(file.name)}`;
+                img.alt = `Visual sample ${index + 1}`;
+                img.loading = 'lazy';
+                figure.appendChild(img);
+            } else {
+                const video = document.createElement('video');
+                video.controls = true;
+                video.preload = 'metadata';
+
+                const source = document.createElement('source');
+                source.src = `images/visuals/${encodeURIComponent(file.name)}`;
+                source.type = file.extension === 'mov' ? 'video/quicktime' : `video/${file.extension}`;
+
+                video.appendChild(source);
+                figure.appendChild(video);
+            }
+
+            gallery.appendChild(figure);
+        });
+    } catch (error) {
+        console.error('Unable to load visuals gallery:', error);
+        gallery.innerHTML = '<p class="visuals-gallery-loading">Could not load visuals right now. Please refresh in a moment.</p>';
+    }
+}
 
 // Navigation functionality
 function initNavigation() {
