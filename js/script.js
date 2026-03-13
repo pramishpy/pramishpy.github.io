@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
+    initThemeToggle();
     initNavigation();
     initScrollAnimations();
     initSkillBars();
@@ -106,14 +107,9 @@ function initNavigation() {
     
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(248, 250, 252, 0.98)';
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.background = 'rgba(248, 250, 252, 0.95)';
-            navbar.style.boxShadow = 'none';
-        }
+        navbar.classList.toggle('scrolled', window.scrollY > 100);
     });
+    navbar.classList.toggle('scrolled', window.scrollY > 100);
     
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
@@ -317,7 +313,7 @@ function showFieldError(field, message) {
 
 function clearFieldError(e) {
     const field = e.target;
-    field.style.borderColor = '#e2e8f0';
+    field.style.borderColor = '';
     
     const errorDiv = field.parentNode.querySelector('.field-error');
     if (errorDiv) {
@@ -737,6 +733,48 @@ function initVisualLightbox() {
             showImageAtIndex(currentImageIndex - 1);
         } else if (event.key === 'ArrowRight') {
             showImageAtIndex(currentImageIndex + 1);
+        }
+    });
+}
+
+function initThemeToggle() {
+    const toggleButton = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    const storageKey = 'portfolio-theme';
+
+    if (!toggleButton) {
+        return;
+    }
+
+    const icon = toggleButton.querySelector('i');
+    const storedTheme = (() => {
+        try {
+            return localStorage.getItem(storageKey);
+        } catch (error) {
+            return null;
+        }
+    })();
+
+    const initialTheme = root.getAttribute('data-theme') || storedTheme || 'light';
+
+    function applyTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        if (icon) {
+            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+        toggleButton.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        toggleButton.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+    }
+
+    applyTheme(initialTheme);
+
+    toggleButton.addEventListener('click', () => {
+        const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        applyTheme(nextTheme);
+        try {
+            localStorage.setItem(storageKey, nextTheme);
+        } catch (error) {
+            // Ignore storage write failures.
         }
     });
 }
