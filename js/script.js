@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypewriter();
     initParticleBackground();
     initMobileMenu();
+    initVisualLightbox();
     fetchGitHubStats();
 });
 
@@ -588,4 +589,68 @@ function fetchGitHubStats() {
                 repoCountElement.textContent = '12+';
             }
         });
+}
+
+function initVisualLightbox() {
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const closeButton = document.getElementById('lightbox-close');
+    const prevButton = document.getElementById('lightbox-prev');
+    const nextButton = document.getElementById('lightbox-next');
+    const galleryImages = document.querySelectorAll('.visuals-gallery .media-item img');
+    let currentImageIndex = -1;
+
+    if (!lightbox || !lightboxImage || !closeButton || !prevButton || !nextButton || galleryImages.length === 0) {
+        return;
+    }
+
+    function showImageAtIndex(index) {
+        const boundedIndex = (index + galleryImages.length) % galleryImages.length;
+        const selectedImage = galleryImages[boundedIndex];
+
+        currentImageIndex = boundedIndex;
+        lightboxImage.src = selectedImage.src;
+        lightboxImage.alt = selectedImage.alt || 'Expanded gallery image';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('lightbox-open');
+        lightboxImage.src = '';
+        currentImageIndex = -1;
+    }
+
+    galleryImages.forEach((image, index) => {
+        image.addEventListener('click', () => {
+            showImageAtIndex(index);
+            lightbox.classList.add('active');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('lightbox-open');
+        });
+    });
+
+    closeButton.addEventListener('click', closeLightbox);
+    prevButton.addEventListener('click', () => showImageAtIndex(currentImageIndex - 1));
+    nextButton.addEventListener('click', () => showImageAtIndex(currentImageIndex + 1));
+
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (!lightbox.classList.contains('active')) {
+            return;
+        }
+
+        if (event.key === 'Escape') {
+            closeLightbox();
+        } else if (event.key === 'ArrowLeft') {
+            showImageAtIndex(currentImageIndex - 1);
+        } else if (event.key === 'ArrowRight') {
+            showImageAtIndex(currentImageIndex + 1);
+        }
+    });
 }
