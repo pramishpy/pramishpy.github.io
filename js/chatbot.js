@@ -57,25 +57,28 @@ document.addEventListener('DOMContentLoaded', () => {
             return "I'm a chatbot designed to answer questions about Pramish Pandey.";
         }
         if (i.includes('pramish')) {
-            return "Pramish Pandey is a Computer Science student passionate about software development, AI, and ML. What would you like to know about him?";
+            return "Pramish Pandey is a Data Engineer and Full Stack Developer at USM, and a Computer Science student focused on AI, data systems, and scalable web applications. What would you like to know about him?";
         }
 
         // Education
         if (i.includes('education') || i.includes('school') || i.includes('college') || i.includes('university')) {
-            return "Pramish is currently pursuing a Bachelor of Science in Computer Science at The University of Southern Mississippi (Jan 2024 – Current) with a 4.0 GPA. He also completed his Cambridge AS and A Levels at Xavier International College.";
+            return "Pramish is pursuing a Bachelor of Science in Computer Science at The University of Southern Mississippi (Jan 2024 - Present), holds a 4.0 GPA, and has earned President's List recognition for four consecutive semesters.";
         }
 
         // Skills
         if (i.includes('skill')) {
-            return "Pramish's skills include: \n- Languages: C++, Python, JavaScript, Java \n- Web Tech: HTML, CSS, Flask \n- AI/ML: PyTorch, CUDA \n- Tools: Visual Studio, Git, GitHub, LeetCode. \nIs there a specific skill you'd like to know more about?";
+            return "Pramish's skills include: \n- Languages: Python, TypeScript, C++, SQL, JavaScript \n- Frameworks: React, Next.js, Django, Node.js, pandas, NumPy, OpenCV \n- Tools: LangChain, Docker, Kubernetes, Git, Postman, AWS, GCP, Supabase, Neon, PostgreSQL, Microsoft AI Studio (Azure). \nDo you want details for a specific area?";
         }
 
         // Projects
         if (i.includes('project')) {
-            return "Pramish has worked on several projects, including 'Mentally' for mental health awareness, 'Mississippi License Test' app, 'Digital Galatea 2025' AI chatbot, and 'CodeBusters' for learning programming. Which one interests you?";
+            return "Pramish has worked on projects including CollabNet (Next.js + PostgreSQL with RLS), Polymer Morphology (Django + React research platform), Mentally (automated CI/CD + AR app), PolyVision (C++/Qt desktop app), and other web applications. Which one interests you?";
+        }
+        if (i.includes('collabnet')) {
+            return "CollabNet is a platform connecting developers and researchers. It uses Next.js, React, and PostgreSQL, reaches a 98/100 Lighthouse score, and applies Row Level Security for strong data isolation.";
         }
         if (i.includes('mentally')) {
-            return "Mentally is a web app using AR and simulations to reduce mental health stigma. It was built with Flask, Python, and JavaScript.";
+            return "Mentally includes an automated deployment and reporting pipeline using GitHub Actions and Docker, plus a Flask backend and AR experiences. It is engineered for reliability with strong validation and testing workflows.";
         }
         if (i.includes('license test')) {
             return "The Mississippi License Test app is a desktop tool to help users practice for their license exam, built with JavaScript, HTML, and CSS.";
