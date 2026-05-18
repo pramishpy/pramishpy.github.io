@@ -102,30 +102,40 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
     height: 70px;
 }
 
+.nav-logo {
+    flex-shrink: 0;
+}
+
 .nav-logo h2 {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
     font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    white-space: nowrap;
+    margin: 0;
 }
 
 .nav-menu {
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.35rem;
+    margin-left: auto;
 }
 
 .nav-link {
     text-decoration: none;
     color: var(--text-primary);
+    font-size: 0.95rem;
     font-weight: 500;
+    line-height: 1;
     transition: var(--transition);
     position: relative;
 }
@@ -167,7 +177,8 @@ body {
     justify-content: center;
     cursor: pointer;
     transition: var(--transition);
-    margin-left: 1rem;
+    margin-left: 0.25rem;
+    flex-shrink: 0;
 }
 
 .theme-toggle:hover {
@@ -1193,6 +1204,8 @@ body.lightbox-open {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
+        margin-left: 0;
+        gap: 1.5rem;
     }
 
     .nav-menu.active {
@@ -1206,6 +1219,10 @@ body.lightbox-open {
     .theme-toggle {
         margin-left: auto;
         margin-right: 0.75rem;
+    }
+
+    .nav-logo h2 {
+        font-size: 1rem;
     }
 
     .hero-content {
@@ -1274,8 +1291,17 @@ body.lightbox-open {
         padding: 0 15px;
     }
 
+    .nav-container {
+        padding: 0 16px;
+        gap: 0.75rem;
+    }
+
     .hero-text h1 {
         font-size: 2rem;
+    }
+
+    .nav-logo h2 {
+        font-size: 0.95rem;
     }
 
     .stats {
