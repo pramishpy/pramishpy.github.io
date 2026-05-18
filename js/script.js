@@ -237,32 +237,48 @@ function initSkillBars() {
 // Contact form functionality
 function initContactForm() {
     const form = document.getElementById('contact-form');
+    if (!form) {
+        return;
+    }
     
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // Get form data
+
+        const inputs = Array.from(form.querySelectorAll('input, textarea'));
+        const isFormValid = inputs.every(input => validateField({ target: input }));
+        if (!isFormValid) {
+            showNotification('Please fix the highlighted fields before sending.', 'info');
+            return;
+        }
+
         const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
-        
-        // Show loading state
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
-        
-        // Simulate form submission (replace with actual form handling)
-        setTimeout(() => {
-            // Show success message
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method || 'POST',
+                body: formData,
+                headers: {
+                    Accept: 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error(`Form submission failed: ${response.status}`);
+            }
+
             showNotification('Message sent successfully!', 'success');
-            
-            // Reset form
             form.reset();
-            
-            // Reset button
+        } catch (error) {
+            console.error('Contact form submission failed:', error);
+            showNotification('Message could not be sent right now. Please try again.', 'info');
+        } finally {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
-        }, 2000);
+        }
     });
     
     // Form validation
