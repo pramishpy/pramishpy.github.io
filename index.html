@@ -1,566 +1,817 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pramish Pandey - Research Software Engineer | Applied AI Fellow | CS Student</title>
+    <title>Pramish Pandey — Research Software Engineer & Applied AI Fellow</title>
+    
+    <!-- SEO & Social Graph Meta Tags -->
+    <meta name="description" content="Portfolio of Pramish Pandey — Research Software Engineer, Applied AI Fellow (AI4ALL & MS AI Collaborative), and CS Student (4.0 GPA). Building scalable data systems, ETL pipelines, and intelligent AI applications.">
+    <meta name="keywords" content="Pramish Pandey, Research Software Engineer, Applied AI Fellow, AI4ALL, LangChain, PyTorch, C++, Django, React, Computer Science, USM, Polymer Morphology, PolyVision">
+    <meta name="author" content="Pramish Pandey">
+    <link rel="canonical" href="https://pramishpandey.com.np">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pramishpandey.com.np/">
+    <meta property="og:title" content="Pramish Pandey — Research Software Engineer & Applied AI Fellow">
+    <meta property="og:description" content="Data engineering, applied AI, and high-performance software systems. 4.0 GPA, AI4ALL Ignite Fellow, and USM researcher.">
+    <meta property="og:image" content="https://pramishpandey.com.np/images/pramish-pandey-profile.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://pramishpandey.com.np/">
+    <meta name="twitter:title" content="Pramish Pandey — Research Software Engineer & Applied AI Fellow">
+    <meta name="twitter:description" content="Data engineering, applied AI, and high-performance software systems. 4.0 GPA, AI4ALL Ignite Fellow, and USM researcher.">
+    <meta name="twitter:image" content="https://pramishpandey.com.np/images/pramish-pandey-profile.jpg">
+
+    <!-- Zero-Flash Theme Execution Script -->
     <script>
         (function() {
             try {
                 var storedTheme = localStorage.getItem('portfolio-theme');
                 if (storedTheme === 'dark' || storedTheme === 'light') {
                     document.documentElement.setAttribute('data-theme', storedTheme);
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
                 }
             } catch (e) {
-                // Ignore storage access issues and keep default theme.
+                document.documentElement.setAttribute('data-theme', 'dark');
             }
         })();
     </script>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Modular CSS Entry Point -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- JSON-LD Structured Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pramish Pandey",
+      "jobTitle": "Research Software Engineer & Applied AI Fellow",
+      "url": "https://pramishpandey.com.np",
+      "sameAs": [
+        "https://github.com/pramishpy",
+        "https://linkedin.com/in/pramishpy",
+        "https://twitter.com/pramishpy"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "The University of Southern Mississippi"
+      },
+      "knowsAbout": ["Artificial Intelligence", "Software Engineering", "Data Engineering", "PyTorch", "C++", "Django", "React", "PostgreSQL"]
+    }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Background Canvas for Particles -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- Ambient Visual Glow Blobs -->
+    <div class="ambient-glow glow-top-right" aria-hidden="true"></div>
+    <div class="ambient-glow glow-bottom-left" aria-hidden="true"></div>
+
+    <!-- Glassmorphic Floating Pill Navbar -->
+    <header class="navbar" role="banner">
         <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Pramish Pandey</h2>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#visuals" class="nav-link">Visuals</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme">
-                <i class="fas fa-moon" aria-hidden="true"></i>
-            </button>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Pramish Pandey</h1>
-                <h2>Research Software Engineer | Applied AI Fellow | CS Student</h2>
-                <p>Data Engineer and Full Stack Developer at the School of Polymer Science & Engineering, building Django-React systems and ETL workflows that process 50,000+ records. I focus on scalable software, secure data governance, and practical AI-enabled solutions for research and industry.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn primary">Get In Touch</a>
-                    <a href="#projects" class="btn outline">View Projects</a>
-                    <a href="resources/resume.pdf" class="btn outline" target="_blank">View Resume</a>
-                    <a href="#visuals" class="btn outline">View Photos/Videos</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="physics-animation">
-                    <div class="atom">
-                        <div class="nucleus"></div>
-                        <div class="electron-orbit orbit-1">
-                            <div class="electron"></div>
-                        </div>
-                        <div class="electron-orbit orbit-2">
-                            <div class="electron"></div>
-                        </div>
-                        <div class="electron-orbit orbit-3">
-                            <div class="electron"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-                <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am currently working as a Data Engineer and Full Stack Developer at The University of Southern Mississippi, where I design enterprise data models, automate ETL workflows, and build full-stack systems using Django, React, PostgreSQL, Python, and SQL.</p>
-
-                    <p>Alongside my role, I am an AI4ALL Ignite Fellow focused on applied AI, LLM workflows, and LangChain integrations. As a Computer Science student with a 4.0 GPA, I have earned the President's List for four consecutive semesters.</p>
-                </div>
-                <div class="about-image">
-                    <img src="images/pramish-pandey-profile.jpg" alt="Pramish Pandey" class="profile-photo">
-                    </div>
-                    
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="education-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Data Engineer & Full Stack Developer</h3>
-                        <h4>School of Polymer Science & Engineering, The University of Southern Mississippi</h4>
-                        <span class="timeline-date">September 2025 - Present</span>
-                        <p>Manage enterprise data models and ETL workflows using Python and SQL to query, clean, and synthesize 50,000+ records into a custom research database.</p>
-                        <p>Built and deployed a Django backend, React frontend, and PostgreSQL stack to streamline bulk record uploads and cut manual upload time by 97%, while documenting tests, errors, and weekly progress for stakeholders.</p>
-                        <p>Project Link: <a href="https://polymermorphology.org" target="_blank" rel="noopener noreferrer">polymermorphology.org</a></p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>AI4ALL Ignite Fellow (Applied AI & LangChain)</h3>
-                        <h4>AI4ALL</h4>
-                        <span class="timeline-date">January 2026 - Present</span>
-                        <p>Selected for a highly competitive accelerator and dedicating 10+ hours per week to generative AI, LLMs, and prompt engineering research.</p>
-                        <p>Prototype AI workflows with Python and LangChain, while exploring enterprise integration patterns for cloud-based AI agents.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Mississippi AI Innovation Hub Fellow</h3>
-                        <h4>Mississippi AI Collaborative</h4>
-                        <span class="timeline-date">January 2026 - Present</span>
-                        <p>Collaborate with Mississippi ITS, AWS, and MAIN to develop and present a high-impact AI project at a statewide showcase.</p>
-                        <p>Recognized for strong teamwork and a commitment to responsible AI infrastructure and impactful large-scale AI solutions.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Learning Assistant - College Algebra Support</h3>
-                        <h4>Center for Faculty Development, The University of Southern Mississippi</h4>
-                        <span class="timeline-date">August 2025 - December 2025</span>
-                        <p>Mentored 150+ students from multiple disciplines to strengthen their mathematical aptitude for higher education.</p>
-                        <p>Demonstrated teamwork, strong communication, and attention to detail in weekly meetings to help maintain an effective learning environment.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Science in Computer Science</h3>
-                        <h4>The University of Southern Mississippi</h4>
-                        <span class="timeline-date">Jan 2024 - Present</span>
-                        <p>Relevant Coursework: Database Management Systems, Intro to AI, Machine Learning, Object-Oriented Programming, Algorithms, Computer Systems, Operating Systems, Secure Software Development, Computer Networks, Linear Algebra, Probability &amp; Statistics, Data Governance Concepts</p>
-                        <div class="achievements">
-                            <span class="achievement">GPA: 4.0/4.0</span>
-                            <span class="achievement">President's List (4 consecutive semesters)</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Cambridge AS and A Levels</h3>
-                        <h4>Xavier International College</h4>
-                        <span class="timeline-date">Aug 2020 - Aug 2022</span>
-                        <p>Coursework: Computer Science, Mathematics, English, Physics</p>
-                        <div class="achievements">
-                            <span class="achievement">GPA: 4.0/4.0</span>
-                            <span class="achievement">Computer Science Focus</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-file-medical"></i>
-                        <h3>AI Transcript Verification for MS Board of Nursing</h3>
-                    </div>
-                    <p>Designed a human-in-the-loop AI system using AWS Lambda, Django, and Amazon Textract to automate nursing transcript verification and reduce document processing to a standardized 2 to 4 minutes.</p>
-                    <p>Developed a Python logic engine with 13 licensure rules to detect fraud patterns, preserve PII security, and power a React dashboard with 100% decision transparency.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AWS Lambda</span>
-                        <span class="tech-tag">Django</span>
-                        <span class="tech-tag">Amazon Textract</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Human-in-the-Loop AI</span>
-                        <span class="tech-tag">PII Security</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://d3sdke4b9dybsk.cloudfront.net" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Website</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-users"></i>
-                        <h3>CollabNet: Connecting Developers and Researchers</h3>
-                    </div>
-                    <p>Architected a scalable Next.js + React interface and achieved a 98/100 Lighthouse performance score through optimized rendering and frontend performance tuning.</p>
-                    <p>Designed PostgreSQL data models for 1,000+ concurrent transactions and implemented strict Row Level Security (RLS) for secure data isolation aligned with PII/PHI standards.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">RLS</span>
-                        <span class="tech-tag">Performance Optimization</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://collabnet.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Website</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>Mentally: Eliminating Mental Health Stigma through AR</h3>
-                    </div>
-                    <p>Built an autonomous reporting and deployment infrastructure using GitHub Actions and Docker, implementing unit tests and integration checks on every commit.</p>
-                    <p>Developed a Flask backend to handle augmented reality workflows, API requests, and data validation, ensuring 99.9% uptime and reliable service delivery for users.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">GitHub Actions</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">CI/CD</span>
-                        <span class="tech-tag">A-Frame</span>
-                        <span class="tech-tag">AR.js</span>
-                        <span class="tech-tag">Jinja2</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://mentally.pramishpandey.com.np/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Website</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-eye"></i>
-                        <h3>Polymer Morphology: Web Application for Polymer Samples</h3>
-                    </div>
-                    <p>Architected a full-stack Django and React application with PostgreSQL on GCP to automate bulk data workflows for polymer research and reduce manual upload time by 97%.</p>
-                    <p>Engineered Python and SQL ETL pipelines to clean, label, and synthesize 50,000+ records, then delivered analytics dashboards and documentation workflows for scientists.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Django</span>
-                        <span class="tech-tag">Django REST Framework</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">React (Vite)</span>
-                        <span class="tech-tag">Plotly.js</span>
-                        <span class="tech-tag">Pillow</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">pandas</span>
-                        <span class="tech-tag">openpyxl</span>
-                        <span class="tech-tag">Recharts</span>
-                        <span class="tech-tag">JSONField</span>
-                        <span class="tech-tag">REST APIs</span>
-                        <span class="tech-tag">WSGI</span>
-                        <span class="tech-tag">A-Frame</span>
-                        <span class="tech-tag">AR.js</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://polymermorphology.org" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Website</a>
-                    </div>
-                </div>
-
-            </div>
-
-            <h3 class="section-title" style="margin-top: 3rem; font-size: 1.75rem;">Additional Projects</h3>
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-microscope"></i>
-                        <h3>PolyVision: Cross-Platform App for Polymer Image Analysis & Visualization</h3>
-                    </div>
-                    <p>Engineering a cross-platform desktop application in modern C++ and Qt 6 for polymer image analysis and visualization, supporting advanced segmentation, synthetic image generation, and publication-ready chart exports for microscopy workflows. Architecting modular analysis pipelines with batch processing, plugin-ready extensibility, and interactive GUI built on MVC/MVVM design.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">C++</span>
-                        <span class="tech-tag">Qt 6</span>
-                        <span class="tech-tag">OpenCV</span>
-                        <span class="tech-tag">CMake</span>
-                        <span class="tech-tag">Qt Charts</span>
-                        <span class="tech-tag">QCustomPlot</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/pramishpy/PolyVision" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                        
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-car"></i>
-                        <h3>Mississippi License Test</h3>
-                    </div>
-                    <p>A web app that has resources on how to pass the computerized license test of Mississippi, featuring practice tests and study materials.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/pramishpy/mississippi-license-practice-tests" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://pramishpy.github.io/mississippi-license-practice-tests/" class="project-link"><i class="fas fa-external-link-alt"></i> Website</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-robot"></i>
-                        <h3>Digital Galatea 2025</h3>
-                    </div>
-                    <p>Built a web app that attempts to replicate human emotions while conversing with an AI chat bot, creating more engaging AI interactions.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Gemini API</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/pramishpy/Digital-Galatea" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                        
-                    </div>
-                </div>
-
-                
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-code"></i>
-                        <h3>CodeBusters</h3>
-                    </div>
-                    <p>An interactive web platform designed to help users learn programming concepts from beginner to advanced levels, featuring lessons, coding exercises, and curated resources.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Skulpt</span>
-                        <span class="tech-tag">PrismJS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/pramishpy/CodeBusters" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://pramishpandey.com.np/CodeBusters/" class="project-link"><i class="fas fa-external-link-alt"></i> Website</a>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Photography & Videography Section -->
-    <section id="visuals" class="section">
-        <div class="container">
-            <h2 class="section-title">Photography & Videography</h2>
-            <p class="visuals-intro">I also create visual stories through photography and cinematic edits, capturing portraits, events, and campus life with a clean, narrative-driven style.</p>
-
-            <div class="visuals-platforms">
-                <a href="https://instagram.com/ppy_stash" class="project-link" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i> instagram.com/ppy_stash
+            <div class="nav-inner">
+                <a href="#home" class="nav-logo" aria-label="Pramish Pandey Home">
+                    <span class="logo-badge">PP</span>
+                    <span>Pramish Pandey</span>
                 </a>
-            </div>
 
-            
+                <nav class="nav-links" aria-label="Main Navigation">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#visuals" class="nav-link">Visuals</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
 
-            <div
-                class="visuals-gallery"
-                id="visuals-gallery"
-                data-github-owner="pramishpy"
-                data-github-repo="pramishpy.github.io"
-                data-github-path="images/visuals"
-                data-github-ref="main"
-                aria-label="Photography and videography gallery"
-            >
-                <p class="visuals-gallery-loading">Loading latest visuals...</p>
-            </div>
-
-            <div class="visuals-cta">
-                <a href="https://instagram.com/ppy_stash" class="btn primary" target="_blank" rel="noopener noreferrer">View Instagram Portfolio</a>
-                <a href="#contact" class="btn outline">Book a Shoot</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
-                    <div class="skills-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">Go</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Frameworks & Libraries</h3>
-                    <div class="skills-tags">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">OpenAI API</span>
-                        <span class="skill-tag">HuggingFace</span>
-                        <span class="skill-tag">LLMs</span>
-                        <span class="skill-tag">Prompt Engineering</span>
-                        <span class="skill-tag">LangChain</span>
-                        <span class="skill-tag">pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">OpenCV</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Tools & Platforms</h3>
-                    <div class="skills-tags">
-                        <span class="skill-tag">Generative AI</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Postman</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">GCP</span>
-                        <span class="skill-tag">Supabase</span>
-                        <span class="skill-tag">Neon</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">Vercel</span>
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">Microsoft AI Studio (Azure)</span>
-                        <span class="skill-tag">Claude Code</span>
-                        <span class="skill-tag">Visual Studio</span>
-                        <span class="skill-tag">Microsoft Office Suite</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-line"></i> Core Competencies</h3>
-                    <div class="skills-tags">
-                        <span class="skill-tag">Data Governance (PII/PHI)</span>
-                        <span class="skill-tag">Object-Oriented Design</span>
-                        <span class="skill-tag">Data Structures & Algorithms</span>
-                        <span class="skill-tag">Data Visualization</span>
-                        <span class="skill-tag">System Architecture</span>
-                        <span class="skill-tag">Cross-Functional Collaboration</span>
-                    </div>
+                <div class="nav-actions">
+                    <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle theme" title="Toggle theme">
+                        <i class="fas fa-sun theme-toggle-icon" aria-hidden="true"></i>
+                    </button>
+                    <a href="resources/resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-file-pdf"></i> Resume
+                    </a>
+                    <button id="mobile-toggle" class="mobile-toggle" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always interested in discussing computer science, research opportunities, or potential collaborations. Feel free to reach out!</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>pramish.pandey@usm.edu</span>
+    <!-- Responsive Mobile Drawer -->
+    <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+    <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile menu">
+        <nav class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#experience" class="mobile-nav-link">Experience</a>
+            <a href="#education" class="mobile-nav-link">Education</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#visuals" class="mobile-nav-link">Visuals</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+        <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+            <button id="mobile-theme-toggle" class="btn btn-secondary" type="button" style="width: 100%; justify-content: center;">
+                <i class="fas fa-sun theme-toggle-icon"></i> Toggle Dark/Light Mode
+            </button>
+            <a href="resources/resume.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="width: 100%; justify-content: center;">
+                <i class="fas fa-file-pdf"></i> View Resume
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Left: Headline & CTAs -->
+                    <div class="hero-content">
+                        <div class="status-pill reveal">
+                            <span class="status-dot"></span>
+                            <span>Status:</span>
+                            <strong>Available for Research & RSE Roles</strong>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>USA</span>
+
+                        <h1 class="hero-name reveal reveal-delay-1">Pramish Pandey</h1>
+                        
+                        <div class="hero-role reveal reveal-delay-2">
+                            <span>Research Software Engineer</span>
+                            <span class="hero-role-separator">•</span>
+                            <span>Applied AI Fellow</span>
+                        </div>
+
+                        <p class="hero-description reveal reveal-delay-3">
+                            Data Engineer at the School of Polymer Science & Engineering (USM), architecting Django-React systems and automated ETL workflows that process <strong>50,000+ records</strong>. Focusing on scalable software architectures, zero-trust data governance, and practical applied AI solutions.
+                        </p>
+
+                        <div class="hero-ctas reveal reveal-delay-4">
+                            <a href="#projects" class="btn btn-primary">
+                                <i class="fas fa-code-branch"></i> View Research & Projects
+                            </a>
+                            <a href="#contact" class="btn btn-secondary">
+                                <i class="fas fa-envelope"></i> Get In Touch
+                            </a>
+                        </div>
+
+                        <div class="hero-socials reveal reveal-delay-4">
+                            <a href="https://github.com/pramishpy" class="social-pill" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                <i class="fab fa-github"></i> <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/pramishpy" class="social-pill" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
+                            </a>
+                            <a href="https://twitter.com/pramishpy" class="social-pill" target="_blank" rel="noopener noreferrer" title="Twitter">
+                                <i class="fab fa-twitter"></i> <span>Twitter</span>
+                            </a>
+                            <a href="https://buymeacoffee.com/pramishpang" class="social-pill" target="_blank" rel="noopener noreferrer" title="Support">
+                                <i class="fas fa-coffee"></i> <span>Coffee</span>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/pramishpy" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/pramishpy" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://twitter.com/pramishpy" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://buymeacoffee.com/pramishpang" class="social-link" title="Buy Me A Coffee"><i class="fas fa-coffee"></i></a>
+                    <!-- Right: Interactive Code Terminal Sandbox -->
+                    <div class="hero-terminal-wrapper reveal reveal-delay-2">
+                        <div class="terminal-card">
+                            <div class="terminal-header">
+                                <div class="terminal-controls">
+                                    <span class="terminal-dot red"></span>
+                                    <span class="terminal-dot yellow"></span>
+                                    <span class="terminal-dot green"></span>
+                                </div>
+                                <div class="terminal-tabs">
+                                    <button class="terminal-tab-btn active" data-tab="pipeline.py">pipeline.py</button>
+                                    <button class="terminal-tab-btn" data-tab="eval.sh">eval.sh</button>
+                                    <button class="terminal-tab-btn" data-tab="metrics.json">metrics.json</button>
+                                </div>
+                                <div class="terminal-actions">
+                                    <button id="terminal-run-btn" class="terminal-action-btn" title="Simulate execution">
+                                        <i class="fas fa-play" style="color: var(--accent-emerald);"></i> Run
+                                    </button>
+                                    <button id="terminal-copy-btn" class="terminal-action-btn" title="Copy snippet">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="terminal-body" class="terminal-body">
+                                <!-- Populated dynamically by terminal.js -->
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="contact-form">
-                    <form id="contact-form" action="https://formspree.io/f/xldyavnz" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary">Send Message</button>
-                    </form>
                 </div>
             </div>
+        </section>
+
+        <!-- About Section & Key Metrics -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fas fa-user-astronaut"></i> Background</span>
+                    <h2 class="section-title">Engineering at the Intersection of AI & Systems</h2>
+                    <p class="section-subtitle">Bridging academic research and production software with deterministic engineering, data isolation, and machine learning pipelines.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card reveal">
+                        <p>
+                            I currently serve as a <strong>Data Engineer and Full Stack Developer</strong> at The University of Southern Mississippi's School of Polymer Science & Engineering. My work centers on architecting resilient data pipelines, designing PostgreSQL enterprise schemas, and deploying full-stack web platforms using Django and React.
+                        </p>
+                        <p>
+                            Simultaneously, I am an <strong>AI4ALL Ignite Fellow</strong> and <strong>Mississippi AI Collaborative Fellow</strong>, exploring generative AI architectures, LangChain agent workflows, and ethical data governance. As a Computer Science student, I maintain a <strong>4.0 GPA</strong> and have earned the President's List for four consecutive semesters.
+                        </p>
+                        <p style="margin-bottom: 0;">
+                            Whether building cross-platform C++ microscopy apps (PolyVision) or human-in-the-loop AI validation engines for state agencies, I focus on minimal blast radius, rock-solid security (PII/PHI), and intuitive user experience.
+                        </p>
+                    </div>
+
+                    <div class="about-photo-wrapper reveal reveal-delay-2">
+                        <img src="images/pramish-pandey-profile.jpg" alt="Pramish Pandey Profile" class="about-photo" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- 4-Column Key Metrics Grid with Animated Counters -->
+                <div class="metrics-grid reveal">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-database metric-icon"></i>
+                        </div>
+                        <div class="metric-number" data-target="50000" data-suffix="+">50,000+</div>
+                        <div class="metric-label">Records Synthesized</div>
+                        <div class="metric-subtext">Automated ETL & research data pipelines</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-bolt metric-icon"></i>
+                        </div>
+                        <div class="metric-number" data-target="97" data-suffix="%">97%</div>
+                        <div class="metric-label">Upload Time Reduction</div>
+                        <div class="metric-subtext">Bulk processing optimization for scientists</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-award metric-icon"></i>
+                        </div>
+                        <div class="metric-number" data-target="4.0" data-suffix="/4.0">4.0/4.0</div>
+                        <div class="metric-label">Academic GPA</div>
+                        <div class="metric-subtext">4x Consecutive President's List Honoree</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <i class="fas fa-handshake-angle metric-icon"></i>
+                        </div>
+                        <div class="metric-number" data-target="2" data-suffix="x">2x</div>
+                        <div class="metric-label">AI Research Fellowships</div>
+                        <div class="metric-subtext">AI4ALL Ignite & MS AI Collaborative</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Research Timeline -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fas fa-briefcase"></i> Track Record</span>
+                    <h2 class="section-title">Experience & Research Fellowships</h2>
+                    <p class="section-subtitle">Delivering high-impact data systems, applied AI prototypes, and academic mentoring.</p>
+                </div>
+
+                <div class="timeline-container">
+                    <!-- Item 1: USM Polymer Science -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Data Engineer & Full Stack Developer</h3>
+                                <span class="timeline-date">Sept 2025 – Present</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fas fa-building-columns"></i> School of Polymer Science & Engineering, The University of Southern Mississippi
+                            </div>
+                            <div class="timeline-bullets">
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Manage enterprise data models and automated ETL workflows using Python and SQL to query, clean, and synthesize 50,000+ records into a custom research database.</span>
+                                </div>
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Built and deployed a full-stack Django backend, React frontend, and PostgreSQL stack on GCP to streamline bulk uploads, cutting manual upload time by 97%.</span>
+                                </div>
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Live Production Platform: <a href="https://polymermorphology.org" target="_blank" rel="noopener noreferrer" style="color: var(--accent-indigo); text-decoration: underline;">polymermorphology.org</a></span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Python</span>
+                                <span class="timeline-tag">Django</span>
+                                <span class="timeline-tag">React</span>
+                                <span class="timeline-tag">PostgreSQL</span>
+                                <span class="timeline-tag">ETL</span>
+                                <span class="timeline-tag">GCP</span>
+                                <span class="timeline-tag">Plotly.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: AI4ALL Ignite -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">AI4ALL Ignite Fellow (Applied AI & LangChain)</h3>
+                                <span class="timeline-date">Jan 2026 – Present</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fas fa-brain"></i> AI4ALL
+                            </div>
+                            <div class="timeline-bullets">
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Selected for a competitive national accelerator, dedicating 10+ hours per week to generative AI, large language models (LLMs), and prompt engineering research.</span>
+                                </div>
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Prototype AI agent workflows with Python and LangChain while evaluating enterprise integration patterns and data privacy guardrails.</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Generative AI</span>
+                                <span class="timeline-tag">LangChain</span>
+                                <span class="timeline-tag">LLMs</span>
+                                <span class="timeline-tag">Prompt Engineering</span>
+                                <span class="timeline-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: MS AI Collaborative -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Mississippi AI Innovation Hub Fellow</h3>
+                                <span class="timeline-date">Jan 2026 – Present</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fas fa-network-wired"></i> Mississippi AI Collaborative (AWS / ITS / MAIN)
+                            </div>
+                            <div class="timeline-bullets">
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Collaborate with Mississippi ITS, AWS, and MAIN to develop and present high-impact AI solutions at a statewide showcase.</span>
+                                </div>
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Focus on responsible AI deployment, secure public sector cloud infrastructure, and large-scale AI utility.</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">AWS</span>
+                                <span class="timeline-tag">Responsible AI</span>
+                                <span class="timeline-tag">Cloud Infrastructure</span>
+                                <span class="timeline-tag">Statewide Systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Learning Assistant -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Learning Assistant — College Algebra Support</h3>
+                                <span class="timeline-date">Aug 2025 – Dec 2025</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fas fa-chalkboard-user"></i> Center for Faculty Development, USM
+                            </div>
+                            <div class="timeline-bullets">
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Mentored 150+ students across multiple STEM disciplines to reinforce mathematical logic and analytical problem-solving skills.</span>
+                                </div>
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Coordinated in weekly pedagogical strategy sessions with university faculty to improve retention and comprehension.</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Mentorship</span>
+                                <span class="timeline-tag">Mathematical Logic</span>
+                                <span class="timeline-tag">STEM Pedagogy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fas fa-graduation-cap"></i> Academics</span>
+                    <h2 class="section-title">Education & Honors</h2>
+                    <p class="section-subtitle">Rigorous foundational and applied computer science curriculum with continuous 4.0 academic distinction.</p>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Bachelor of Science in Computer Science</h3>
+                                <span class="timeline-date">Jan 2024 – Present</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fas fa-university"></i> The University of Southern Mississippi
+                            </div>
+                            <p class="timeline-body">
+                                <strong>Coursework:</strong> Database Management Systems, Machine Learning & Intro to AI, Object-Oriented Programming, Data Structures & Algorithms, Computer Systems, Operating Systems, Secure Software Development, Computer Networks, Linear Algebra, Probability & Statistics, Data Governance Concepts.
+                            </p>
+                            <div class="achievements-group">
+                                <span class="achievement-badge"><i class="fas fa-star"></i> GPA: 4.0 / 4.0</span>
+                                <span class="achievement-badge"><i class="fas fa-certificate"></i> President's List (4 Consecutive Semesters)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Cambridge AS & A Levels</h3>
+                                <span class="timeline-date">Aug 2020 – Aug 2022</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fas fa-school"></i> Xavier International College
+                            </div>
+                            <p class="timeline-body">
+                                <strong>Coursework:</strong> Computer Science, Mathematics, Physics, English.
+                            </p>
+                            <div class="achievements-group">
+                                <span class="achievement-badge"><i class="fas fa-star"></i> GPA: 4.0 / 4.0</span>
+                                <span class="achievement-badge"><i class="fas fa-code"></i> Computer Science Distinction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fas fa-cubes"></i> Portfolio</span>
+                    <h2 class="section-title">Featured Research & Engineering Projects</h2>
+                    <p class="section-subtitle">Applied AI pipelines, high-throughput desktop vision software, and scalable web platforms.</p>
+                </div>
+
+                <!-- Category Filter Chips -->
+                <div class="filter-tabs reveal">
+                    <button class="filter-chip active" data-filter="all">All Projects</button>
+                    <button class="filter-chip" data-filter="ai-llms">AI & LLMs</button>
+                    <button class="filter-chip" data-filter="systems">Systems & Infrastructure</button>
+                    <button class="filter-chip" data-filter="vision">Computer Vision</button>
+                    <button class="filter-chip" data-filter="open-source">Open Source</button>
+                </div>
+
+                <!-- Dynamic Projects Grid Container (Populated by js/modules/projects.js) -->
+                <div id="projects-grid" class="grid grid-cols-2"></div>
+            </div>
+        </section>
+
+        <!-- Photography & Videography Section -->
+        <section id="visuals" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fas fa-camera"></i> Creative</span>
+                    <h2 class="section-title">Photography & Visual Storytelling</h2>
+                    <p class="section-subtitle">Capturing portraits, events, and university life through high-contrast cinematic visual narratives.</p>
+                </div>
+
+                <!-- Visuals Media Gallery Container (Populated by js/modules/gallery.js) -->
+                <div 
+                    id="visuals-gallery" 
+                    class="visuals-gallery" 
+                    data-github-owner="pramishpy" 
+                    data-github-repo="pramishpy.github.io" 
+                    data-github-path="images/visuals" 
+                    data-github-ref="main"
+                    aria-label="Photography and visual media showcase"
+                >
+                    <p class="visuals-gallery-loading">Loading curated visuals from repository...</p>
+                </div>
+
+                <div class="flex justify-center gap-4 reveal" style="margin-top: 2rem; flex-wrap: wrap;">
+                    <a href="https://instagram.com/ppy_stash" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i> View Instagram Portfolio (@ppy_stash)
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-calendar-check"></i> Book a Shoot
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Matrix Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fas fa-microchip"></i> Capabilities</span>
+                    <h2 class="section-title">Technical Proficiency & Stack</h2>
+                    <p class="section-subtitle">Core languages, machine learning frameworks, distributed infrastructure, and engineering standards.</p>
+                </div>
+
+                <div class="skills-categories-grid">
+                    <!-- Languages -->
+                    <div class="skill-box reveal">
+                        <div class="skill-box-header">
+                            <div class="skill-box-icon"><i class="fas fa-code"></i></div>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="skills-pill-cloud">
+                            <span class="skill-pill featured"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-pill featured"><i class="fas fa-terminal"></i> C++ (C++20)</span>
+                            <span class="skill-pill"><i class="fab fa-js"></i> TypeScript</span>
+                            <span class="skill-pill"><i class="fas fa-cube"></i> Go</span>
+                            <span class="skill-pill"><i class="fas fa-terminal"></i> C</span>
+                            <span class="skill-pill featured"><i class="fas fa-database"></i> SQL (PostgreSQL)</span>
+                            <span class="skill-pill"><i class="fab fa-js-square"></i> JavaScript</span>
+                            <span class="skill-pill"><i class="fab fa-html5"></i> HTML5 / CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- AI/ML & Frameworks -->
+                    <div class="skill-box reveal reveal-delay-1">
+                        <div class="skill-box-header">
+                            <div class="skill-box-icon"><i class="fas fa-brain"></i></div>
+                            <h3>AI, ML & Frameworks</h3>
+                        </div>
+                        <div class="skills-pill-cloud">
+                            <span class="skill-pill featured"><i class="fas fa-link"></i> LangChain</span>
+                            <span class="skill-pill featured"><i class="fas fa-fire"></i> PyTorch</span>
+                            <span class="skill-pill"><i class="fas fa-eye"></i> OpenCV</span>
+                            <span class="skill-pill"><i class="fab fa-react"></i> React / Next.js</span>
+                            <span class="skill-pill featured"><i class="fab fa-python"></i> Django / DRF</span>
+                            <span class="skill-pill"><i class="fas fa-comments"></i> Prompt Chaining</span>
+                            <span class="skill-pill"><i class="fas fa-table"></i> pandas & NumPy</span>
+                            <span class="skill-pill"><i class="fas fa-chart-simple"></i> Plotly / Recharts</span>
+                        </div>
+                    </div>
+
+                    <!-- Cloud, DevOps & Tools -->
+                    <div class="skill-box reveal reveal-delay-2">
+                        <div class="skill-box-header">
+                            <div class="skill-box-icon"><i class="fas fa-cloud"></i></div>
+                            <h3>Cloud, Systems & DevOps</h3>
+                        </div>
+                        <div class="skills-pill-cloud">
+                            <span class="skill-pill featured"><i class="fab fa-aws"></i> AWS (Lambda/Textract)</span>
+                            <span class="skill-pill"><i class="fab fa-google"></i> Google Cloud Platform</span>
+                            <span class="skill-pill featured"><i class="fab fa-docker"></i> Docker</span>
+                            <span class="skill-pill"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                            <span class="skill-pill"><i class="fab fa-git-alt"></i> Git & GitHub Actions</span>
+                            <span class="skill-pill"><i class="fas fa-bolt"></i> Neon & Supabase</span>
+                            <span class="skill-pill"><i class="fas fa-shield-halved"></i> Row Level Security (RLS)</span>
+                            <span class="skill-pill"><i class="fas fa-vial"></i> Postman / pytest</span>
+                        </div>
+                    </div>
+
+                    <!-- Core Competencies -->
+                    <div class="skill-box reveal reveal-delay-3">
+                        <div class="skill-box-header">
+                            <div class="skill-box-icon"><i class="fas fa-layer-group"></i></div>
+                            <h3>Core Engineering Competencies</h3>
+                        </div>
+                        <div class="skills-pill-cloud">
+                            <span class="skill-pill featured"><i class="fas fa-lock"></i> Data Governance (PII/PHI)</span>
+                            <span class="skill-pill featured"><i class="fas fa-gears"></i> Automated ETL Pipelines</span>
+                            <span class="skill-pill"><i class="fas fa-diagram-project"></i> System Architecture</span>
+                            <span class="skill-pill"><i class="fas fa-sitemap"></i> OOP & Design Patterns</span>
+                            <span class="skill-pill"><i class="fas fa-calculator"></i> Data Structures & Algorithms</span>
+                            <span class="skill-pill"><i class="fas fa-users"></i> Cross-Functional Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frictionless Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fas fa-paper-plane"></i> Connect</span>
+                    <h2 class="section-title">Let's Discuss Research & Engineering</h2>
+                    <p class="section-subtitle">Open to Research Software Engineering roles, applied AI collaborations, and technical partnerships.</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <!-- Left: Info Card & Instant Copy Email -->
+                    <div class="contact-card reveal">
+                        <h3 style="font-size: var(--text-2xl); margin-bottom: 1rem;">Direct Contact</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                            Feel free to reach out directly via email, message me through the form, or connect across professional platforms.
+                        </p>
+
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-info-detail">
+                                    <span>Primary Email</span>
+                                    <button id="copy-email-btn" class="copy-email-btn" type="button" aria-label="Copy email address">
+                                        <strong>pramish.pandey@usm.edu</strong>
+                                        <i class="fas fa-copy"></i>
+                                        <span id="copy-tooltip" class="copy-tooltip">Copied to clipboard!</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-icon-box"><i class="fas fa-location-dot"></i></div>
+                                <div class="contact-info-detail">
+                                    <span>Location</span>
+                                    <strong>United States (Hattiesburg, MS)</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <span style="font-size: var(--text-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.75rem;">Verified Profiles</span>
+                            <div class="hero-socials">
+                                <a href="https://github.com/pramishpy" class="social-pill" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="https://linkedin.com/in/pramishpy" class="social-pill" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="https://twitter.com/pramishpy" class="social-pill" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-twitter"></i> Twitter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Formspree Contact Form -->
+                    <div class="contact-card reveal reveal-delay-2">
+                        <h3 style="font-size: var(--text-xl); margin-bottom: 1.5rem;">Send a Message</h3>
+                        
+                        <form id="contact-form" action="https://formspree.io/f/xldyavnz" method="POST" novalidate>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="form-name" class="form-label">Your Name *</label>
+                                    <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Dr. Alex Morgan" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email" class="form-label">Your Email *</label>
+                                    <input type="email" id="form-email" name="email" class="form-input" placeholder="alex@lab.edu" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-subject" class="form-label">Subject *</label>
+                                <input type="text" id="form-subject" name="subject" class="form-input" placeholder="RSE Research Collaboration" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-message" class="form-label">Message *</label>
+                                <textarea id="form-message" name="message" class="form-textarea" placeholder="Describe the project, inquiry, or role..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 0.85rem;">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating AI Assistant Chatbot Widget -->
+    <div class="chatbot-wrapper">
+        <button id="chatbot-launcher" class="chatbot-launcher" type="button" aria-label="Open portfolio AI assistant" aria-expanded="false" title="Chat with AI Assistant">
+            <i class="fas fa-robot"></i>
+            <span class="chatbot-launcher-ping"></span>
+        </button>
+
+        <div id="chatbot-modal" class="chatbot-modal" role="dialog" aria-modal="true" aria-label="Pramish's AI Assistant">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <div class="chatbot-avatar"><i class="fas fa-brain"></i></div>
+                    <div class="chatbot-title-box">
+                        <h4>Pramish AI Assistant</h4>
+                        <span><i class="fas fa-circle" style="font-size: 6px;"></i> Active & Ready</span>
+                    </div>
+                </div>
+                <div class="chatbot-header-actions">
+                    <button id="chatbot-clear" class="chatbot-btn-icon" title="Clear conversation" type="button">
+                        <i class="fas fa-trash-can"></i>
+                    </button>
+                    <button id="chatbot-close" class="chatbot-btn-icon" title="Close chat" type="button">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="chatbot-messages" class="chatbot-messages" aria-live="polite">
+                <!-- Messages populated by chatbot.js -->
+            </div>
+
+            <div class="chatbot-chips">
+                <button class="chip-btn" data-prompt="What is Pramish's experience in Applied AI?">AI & LangChain</button>
+                <button class="chip-btn" data-prompt="Tell me about his PolyVision desktop app.">PolyVision</button>
+                <button class="chip-btn" data-prompt="What data systems has he built for polymer science?">50k+ ETL Platform</button>
+                <button class="chip-btn" data-prompt="How can I contact Pramish?">Contact Info</button>
+            </div>
+
+            <div class="chatbot-input-bar">
+                <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Ask about skills, projects, or research..." aria-label="Type your message">
+                <button id="chatbot-send" class="chatbot-send-btn" type="button" aria-label="Send message">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Lightbox Modal for Visuals -->
+    <div id="image-lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Media Lightbox">
+        <button id="lightbox-close" class="lightbox-btn lightbox-close" type="button" aria-label="Close image viewer">
+            <i class="fas fa-xmark"></i>
+        </button>
+        <button id="lightbox-prev" class="lightbox-btn lightbox-prev" type="button" aria-label="Previous image">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="lightbox-next" class="lightbox-btn lightbox-next" type="button" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="Expanded preview">
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Pramish Pandey</h3>
+                    <p>Research Software Engineer & Applied AI Fellow building resilient data systems, intelligent pipelines, and high-performance software.</p>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Navigation</h4>
+                    <nav class="footer-nav">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Deep Dives</h4>
+                    <nav class="footer-nav">
+                        <a href="polyvision-case-study.html">PolyVision Case Study</a>
+                        <a href="resources/resume.pdf" target="_blank">Download Resume</a>
+                        <a href="https://github.com/pramishpy" target="_blank">GitHub Repositories</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
                 <p>&copy; 2026 Pramish Pandey. All rights reserved.</p>
-                <p>Built with passion for computer science and web development.</p>
+                <p>Designed with Linear/Vercel principles • Zero-build static architecture</p>
             </div>
         </div>
     </footer>
 
-    <div class="lightbox" id="image-lightbox" aria-hidden="true">
-        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">
-            <i class="fas fa-times"></i>
-        </button>
-        <img id="lightbox-image" src="" alt="Expanded gallery preview">
-    </div>
-
-    <script src="js/script.js"></script>
+    <!-- Main ES6 JavaScript Module Coordinator -->
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
