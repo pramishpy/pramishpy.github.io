@@ -83,17 +83,16 @@
     <header class="navbar" role="banner">
         <div class="nav-container">
             <div class="nav-inner">
-                <a href="#home" class="nav-logo" aria-label="Pramish Pandey Home">
-                    <span class="logo-badge">PP</span>
-                    <span>Pramish Pandey</span>
-                </a>
+                <a href="#home" class="nav-logo" aria-label="Home"></a>
 
                 <nav class="nav-links" aria-label="Main Navigation">
                     <a href="#home" class="nav-link active">Home</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#experience" class="nav-link">Experience</a>
                     <a href="#education" class="nav-link">Education</a>
+                    <a href="#publications" class="nav-link">Publications</a>
                     <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#leadership" class="nav-link">Leadership</a>
                     <a href="#visuals" class="nav-link">Visuals</a>
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#contact" class="nav-link">Contact</a>
@@ -124,7 +123,9 @@
             <a href="#about" class="mobile-nav-link">About</a>
             <a href="#experience" class="mobile-nav-link">Experience</a>
             <a href="#education" class="mobile-nav-link">Education</a>
+            <a href="#publications" class="mobile-nav-link">Publications</a>
             <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#leadership" class="mobile-nav-link">Leadership</a>
             <a href="#visuals" class="mobile-nav-link">Visuals</a>
             <a href="#skills" class="mobile-nav-link">Skills</a>
             <a href="#contact" class="mobile-nav-link">Contact</a>
@@ -146,12 +147,6 @@
                 <div class="hero-grid">
                     <!-- Left: Headline & CTAs -->
                     <div class="hero-content">
-                        <div class="status-pill reveal">
-                            <span class="status-dot"></span>
-                            <span>Status:</span>
-                            <strong>Available for Research & RSE Roles</strong>
-                        </div>
-
                         <h1 class="hero-name reveal reveal-delay-1">Pramish Pandey</h1>
                         
                         <div class="hero-role reveal reveal-delay-2">
@@ -236,7 +231,7 @@
                             I currently serve as a <strong>Data Engineer and Full Stack Developer</strong> at The University of Southern Mississippi's School of Polymer Science & Engineering. My work centers on architecting resilient data pipelines, designing PostgreSQL enterprise schemas, and deploying full-stack web platforms using Django and React.
                         </p>
                         <p>
-                            Simultaneously, I am an <strong>AI4ALL Ignite Fellow</strong> and <strong>Mississippi AI Collaborative Fellow</strong>, exploring generative AI architectures, LangChain agent workflows, and ethical data governance. As a Computer Science student, I maintain a <strong>4.0 GPA</strong> and have earned the President's List for four consecutive semesters.
+                            Simultaneously, I am an <strong>AI4ALL Ignite Fellow</strong> building bias-audited machine learning pipelines on 24.9M CDC Natality records, and an <strong>AI Innovation Hub Fellow</strong> with the Mississippi Dept. of Information Technology Services, where I architected a serverless AWS pipeline for automated transcript verification. As a Computer Science student, I maintain a <strong>4.0 GPA</strong> and have earned the President's List for five consecutive semesters.
                         </p>
                         <p style="margin-bottom: 0;">
                             Whether building cross-platform C++ microscopy apps (PolyVision) or human-in-the-loop AI validation engines for state agencies, I focus on minimal blast radius, rock-solid security (PII/PHI), and intuitive user experience.
@@ -274,7 +269,7 @@
                         </div>
                         <div class="metric-number" data-target="4.0" data-suffix="/4.0">4.0/4.0</div>
                         <div class="metric-label">Academic GPA</div>
-                        <div class="metric-subtext">4x Consecutive President's List Honoree</div>
+                        <div class="metric-subtext">5x Consecutive President's List Honoree</div>
                     </div>
 
                     <div class="metric-card">
@@ -283,7 +278,7 @@
                         </div>
                         <div class="metric-number" data-target="2" data-suffix="x">2x</div>
                         <div class="metric-label">AI Research Fellowships</div>
-                        <div class="metric-subtext">AI4ALL Ignite & MS AI Collaborative</div>
+                        <div class="metric-subtext">AI4ALL Ignite & MS AI Innovation Hub</div>
                     </div>
                 </div>
             </div>
@@ -317,7 +312,11 @@
                                 </div>
                                 <div class="timeline-bullet">
                                     <i class="fas fa-circle-check"></i>
-                                    <span>Built and deployed a full-stack Django backend, React frontend, and PostgreSQL stack on GCP to streamline bulk uploads, cutting manual upload time by 97%.</span>
+                                    <span>Built and deployed a full-stack Django backend, React frontend, and PostgreSQL stack on GCP (with Firebase Hosting) giving collaborators shared, sample-level access, cutting research data sorting and retrieval time by 90%.</span>
+                                </div>
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Built Python data pipelines and Google Cloud Storage integrations to ingest, annotate, and synthesize 50,000+ raw research files across 20+ active laboratory studies, forming the basis of a manuscript currently in preparation.</span>
                                 </div>
                                 <div class="timeline-bullet">
                                     <i class="fas fa-circle-check"></i>
@@ -341,7 +340,7 @@
                         <div class="timeline-marker"></div>
                         <div class="timeline-card">
                             <div class="timeline-header">
-                                <h3 class="timeline-role">AI4ALL Ignite Fellow (Applied AI & LangChain)</h3>
+                                <h3 class="timeline-role">AI4ALL Ignite Fellow</h3>
                                 <span class="timeline-date">Jan 2026 – Present</span>
                             </div>
                             <div class="timeline-company">
@@ -350,18 +349,18 @@
                             <div class="timeline-bullets">
                                 <div class="timeline-bullet">
                                     <i class="fas fa-circle-check"></i>
-                                    <span>Selected for a competitive national accelerator, dedicating 10+ hours per week to generative AI, large language models (LLMs), and prompt engineering research.</span>
+                                    <span>Engineered an end-to-end Python machine learning pipeline to process 24.9 million CDC Natality records, optimizing XGBoost and deep learning architectures (TabNet) on a 3-million-row stratified sample to predict preterm births.</span>
                                 </div>
                                 <div class="timeline-bullet">
                                     <i class="fas fa-circle-check"></i>
-                                    <span>Prototype AI agent workflows with Python and LangChain while evaluating enterprise integration patterns and data privacy guardrails.</span>
+                                    <span>Audited and mitigated bias across 3 targeted fairness metrics using SHAP and g-computation, testing disparity hypotheses with bounded confidence intervals, and deploying a Streamlit dashboard for responsible AI auditing.</span>
                                 </div>
                             </div>
                             <div class="timeline-tags">
-                                <span class="timeline-tag">Generative AI</span>
-                                <span class="timeline-tag">LangChain</span>
-                                <span class="timeline-tag">LLMs</span>
-                                <span class="timeline-tag">Prompt Engineering</span>
+                                <span class="timeline-tag">XGBoost</span>
+                                <span class="timeline-tag">TabNet</span>
+                                <span class="timeline-tag">SHAP</span>
+                                <span class="timeline-tag">Streamlit</span>
                                 <span class="timeline-tag">Python</span>
                             </div>
                         </div>
@@ -372,27 +371,32 @@
                         <div class="timeline-marker"></div>
                         <div class="timeline-card">
                             <div class="timeline-header">
-                                <h3 class="timeline-role">Mississippi AI Innovation Hub Fellow</h3>
-                                <span class="timeline-date">Jan 2026 – Present</span>
+                                <h3 class="timeline-role">AI Innovation Hub Fellow (Backend Developer)</h3>
+                                <span class="timeline-date">Feb 2026 – May 2026</span>
                             </div>
                             <div class="timeline-company">
-                                <i class="fas fa-network-wired"></i> Mississippi AI Collaborative (AWS / ITS / MAIN)
+                                <i class="fas fa-network-wired"></i> Mississippi Dept. of Information Technology Services
                             </div>
                             <div class="timeline-bullets">
                                 <div class="timeline-bullet">
                                     <i class="fas fa-circle-check"></i>
-                                    <span>Collaborate with Mississippi ITS, AWS, and MAIN to develop and present high-impact AI solutions at a statewide showcase.</span>
+                                    <span>Architected a serverless AWS Step Functions pipeline orchestrating API Gateway and Lambda to automate PDF transcript processing, extracting 16 structured academic fields via Amazon Textract and Bedrock Nova Pro.</span>
                                 </div>
                                 <div class="timeline-bullet">
                                     <i class="fas fa-circle-check"></i>
-                                    <span>Focus on responsible AI deployment, secure public sector cloud infrastructure, and large-scale AI utility.</span>
+                                    <span>Engineered an 18-rule deterministic Python verification engine combined with Bedrock AI analysis to evaluate synthetic records, automatically flagging academic anomalies and fraud indicators for human review.</span>
+                                </div>
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Developed a React single-page application with append-only audit logging for AI decisions and tailored a validated proof of concept for the Mississippi State Board of Nursing by assessing their needs in weekly standup meetings.</span>
                                 </div>
                             </div>
                             <div class="timeline-tags">
-                                <span class="timeline-tag">AWS</span>
-                                <span class="timeline-tag">Responsible AI</span>
-                                <span class="timeline-tag">Cloud Infrastructure</span>
-                                <span class="timeline-tag">Statewide Systems</span>
+                                <span class="timeline-tag">AWS Step Functions</span>
+                                <span class="timeline-tag">Amazon Textract</span>
+                                <span class="timeline-tag">Bedrock Nova Pro</span>
+                                <span class="timeline-tag">Lambda</span>
+                                <span class="timeline-tag">React</span>
                             </div>
                         </div>
                     </div>
@@ -444,7 +448,7 @@
                         <div class="timeline-card">
                             <div class="timeline-header">
                                 <h3 class="timeline-role">Bachelor of Science in Computer Science</h3>
-                                <span class="timeline-date">Jan 2024 – Present</span>
+                                <span class="timeline-date">Jan 2024 – Expected May 2027</span>
                             </div>
                             <div class="timeline-company">
                                 <i class="fas fa-university"></i> The University of Southern Mississippi
@@ -454,7 +458,8 @@
                             </p>
                             <div class="achievements-group">
                                 <span class="achievement-badge"><i class="fas fa-star"></i> GPA: 4.0 / 4.0</span>
-                                <span class="achievement-badge"><i class="fas fa-certificate"></i> President's List (4 Consecutive Semesters)</span>
+                                <span class="achievement-badge"><i class="fas fa-certificate"></i> President's List (5 Consecutive Semesters)</span>
+                                <span class="achievement-badge"><i class="fas fa-trophy"></i> Academic Excellence Scholarship (Full Tuition)</span>
                             </div>
                         </div>
                     </div>
@@ -482,6 +487,38 @@
             </div>
         </section>
 
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fas fa-book"></i> Research Output</span>
+                    <h2 class="section-title">Publications</h2>
+                    <p class="section-subtitle">Manuscripts and research output arising from platform and pipeline engineering work.</p>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">A Centralized Data Platform Enabling Collaborative, Sample-Level Access for Polymer Morphology Research</h3>
+                                <span class="timeline-date">In Preparation</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fas fa-building-columns"></i> Pandey, P., et al. — School of Polymer Science & Engineering, The University of Southern Mississippi
+                            </div>
+                            <div class="timeline-bullets">
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Documents the design and impact of the Django/React/GCP research data platform built to give collaborators shared, sample-level access across 20+ active laboratory studies.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Projects Showcase Section -->
         <section id="projects" class="section">
             <div class="container">
@@ -502,6 +539,61 @@
 
                 <!-- Dynamic Projects Grid Container (Populated by js/modules/projects.js) -->
                 <div id="projects-grid" class="grid grid-cols-2"></div>
+            </div>
+        </section>
+
+        <!-- Leadership & Entrepreneurship Section -->
+        <section id="leadership" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag"><i class="fas fa-people-group"></i> Beyond Engineering</span>
+                    <h2 class="section-title">Leadership & Entrepreneurship</h2>
+                    <p class="section-subtitle">Building ventures and organizations alongside academic and research work.</p>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Co-Founder</h3>
+                                <span class="timeline-date">Jan 2026 – Present</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fas fa-scale-balanced"></i> Clean-Slate, Guided Expungement Platform
+                            </div>
+                            <div class="timeline-bullets">
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Co-founded an automated legal-document platform that guides eligible individuals through the criminal record expungement process.</span>
+                                </div>
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Led technical and non-technical stakeholder presentations and raised $1,500 in non-dilutive funding, including $1,000 from the Hult Prize Campus Final and $500 from Checkpoint for product R&D.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Treasurer</h3>
+                                <span class="timeline-date">Fall 2026 – Present</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fas fa-sitemap"></i> USM Entrepreneurship Society
+                            </div>
+                            <div class="timeline-bullets">
+                                <div class="timeline-bullet">
+                                    <i class="fas fa-circle-check"></i>
+                                    <span>Manage the organization's budget and financial planning in support of student entrepreneurship programming and events.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -573,12 +665,14 @@
                             <h3>AI, ML & Frameworks</h3>
                         </div>
                         <div class="skills-pill-cloud">
-                            <span class="skill-pill featured"><i class="fas fa-link"></i> LangChain</span>
                             <span class="skill-pill featured"><i class="fas fa-fire"></i> PyTorch</span>
+                            <span class="skill-pill featured"><i class="fas fa-chart-line"></i> XGBoost</span>
+                            <span class="skill-pill featured"><i class="fas fa-face-smile"></i> Hugging Face</span>
+                            <span class="skill-pill"><i class="fas fa-magnifying-glass-chart"></i> SHAP</span>
+                            <span class="skill-pill"><i class="fas fa-link"></i> LangChain</span>
                             <span class="skill-pill"><i class="fas fa-eye"></i> OpenCV</span>
                             <span class="skill-pill"><i class="fab fa-react"></i> React / Next.js</span>
-                            <span class="skill-pill featured"><i class="fab fa-python"></i> Django / DRF</span>
-                            <span class="skill-pill"><i class="fas fa-comments"></i> Prompt Chaining</span>
+                            <span class="skill-pill featured"><i class="fab fa-python"></i> Django / FastAPI</span>
                             <span class="skill-pill"><i class="fas fa-table"></i> pandas & NumPy</span>
                             <span class="skill-pill"><i class="fas fa-chart-simple"></i> Plotly / Recharts</span>
                         </div>
@@ -591,8 +685,9 @@
                             <h3>Cloud, Systems & DevOps</h3>
                         </div>
                         <div class="skills-pill-cloud">
-                            <span class="skill-pill featured"><i class="fab fa-aws"></i> AWS (Lambda/Textract)</span>
+                            <span class="skill-pill featured"><i class="fab fa-aws"></i> AWS (Step Functions/Textract/Bedrock)</span>
                             <span class="skill-pill"><i class="fab fa-google"></i> Google Cloud Platform</span>
+                            <span class="skill-pill"><i class="fas fa-fire-flame-curved"></i> Firebase</span>
                             <span class="skill-pill featured"><i class="fab fa-docker"></i> Docker</span>
                             <span class="skill-pill"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
                             <span class="skill-pill"><i class="fab fa-git-alt"></i> Git & GitHub Actions</span>
@@ -743,7 +838,7 @@
             </div>
 
             <div class="chatbot-chips">
-                <button class="chip-btn" data-prompt="What is Pramish's experience in Applied AI?">AI & LangChain</button>
+                <button class="chip-btn" data-prompt="What is Pramish's AI4ALL fellowship work?">AI4ALL & TabNet</button>
                 <button class="chip-btn" data-prompt="Tell me about his PolyVision desktop app.">PolyVision</button>
                 <button class="chip-btn" data-prompt="What data systems has he built for polymer science?">50k+ ETL Platform</button>
                 <button class="chip-btn" data-prompt="How can I contact Pramish?">Contact Info</button>

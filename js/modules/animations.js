@@ -2,37 +2,54 @@
  * Scroll Reveal Animations & Number Counter Hooks
  */
 
+// Shared across initAnimations() and any later dynamically-injected content
+// (e.g. the visuals gallery, which loads asynchronously after initAnimations runs).
+let sharedRevealObserver = null;
+let reducedMotionCached = false;
+
+/**
+ * Registers one or more elements with the shared scroll-reveal system.
+ * Safe to call at any time, including after initAnimations() has already run,
+ * so dynamically-added .reveal elements (e.g. gallery items) still animate in.
+ */
+export function observeReveal(elements) {
+    const els = elements instanceof NodeList || Array.isArray(elements) ? elements : [elements];
+    if (!els || els.length === 0) return;
+
+    if (reducedMotionCached) {
+        els.forEach(el => el.classList.add('active'));
+        return;
+    }
+
+    if (!sharedRevealObserver) {
+        sharedRevealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+    }
+
+    els.forEach(el => sharedRevealObserver.observe(el));
+}
+
 export function initAnimations() {
-    const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    reducedMotionCached = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // IntersectionObserver for elements with .reveal
     const revealElements = document.querySelectorAll('.reveal');
-    
-    if (revealElements.length > 0) {
-        if (isReducedMotion) {
-            revealElements.forEach(el => el.classList.add('active'));
-        } else {
-            const revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.12,
-                rootMargin: '0px 0px -40px 0px'
-            });
-
-            revealElements.forEach(el => revealObserver.observe(el));
-        }
-    }
+    observeReveal(revealElements);
 
     // Number Counter Animation for Metric Cards
     const counterElements = document.querySelectorAll('.metric-number[data-target]');
 
     if (counterElements.length > 0) {
-        if (isReducedMotion) {
+        if (reducedMotionCached) {
             counterElements.forEach(el => {
                 const target = el.getAttribute('data-target');
                 const suffix = el.getAttribute('data-suffix') || '';

@@ -8,28 +8,40 @@ const knowledgeBase = [
         response: "Hello! I am Pramish's portfolio AI assistant. I can answer questions about his **Applied AI research**, **full-stack engineering projects**, **technical skills**, **4.0 GPA academic background**, or **how to collaborate with him**."
     },
     {
-        keywords: ["ai", "langchain", "llm", "ignite", "fellowship", "applied ai", "generative ai"],
-        response: "Pramish is an **AI4ALL Ignite Fellow** and **Mississippi AI Innovation Hub Fellow**. He prototypes generative AI pipelines and LLM agents using Python, LangChain, and AWS/Azure, focusing on enterprise prompt engineering, human-in-the-loop workflows, and ethical data governance."
+        keywords: ["ai4all", "ignite", "cdc", "natality", "xgboost", "tabnet", "preterm", "bias", "fairness"],
+        response: "As an **AI4ALL Ignite Fellow**, Pramish engineered an end-to-end ML pipeline processing **24.9 million CDC Natality records**, optimizing XGBoost and TabNet on a 3-million-row stratified sample to predict preterm births. He audited bias with SHAP and g-computation, and deployed a Streamlit dashboard for responsible AI auditing."
+    },
+    {
+        keywords: ["ai", "langchain", "llm", "fellowship", "applied ai", "generative ai"],
+        response: "Pramish is an **AI4ALL Ignite Fellow** and completed an **AI Innovation Hub Fellowship** with the Mississippi Dept. of Information Technology Services, working across applied machine learning, LLM-backed document pipelines, and responsible AI auditing."
     },
     {
         keywords: ["polyvision", "microscopy", "c++", "qt", "opencv", "computer vision", "desktop"],
         response: "<strong>PolyVision</strong> is a cross-platform C++20 / Qt 6 desktop application for polymer microscopy image analysis. It integrates OpenCV for automated morphological feature extraction and segmentation, achieving **10-15x faster processing** than manual methods with **95%+ detection accuracy**."
     },
     {
-        keywords: ["polymer morphology", "django", "etl", "records", "database", "50000", "usm"],
-        response: "At the **School of Polymer Science & Engineering (USM)**, Pramish designed a full-stack Django + React platform with PostgreSQL on GCP, managing automated ETL workflows for **50,000+ experimental records** and reducing manual upload time by **97%** (<a href='https://polymermorphology.org' target='_blank' style='color:var(--accent-indigo); text-decoration:underline;'>polymermorphology.org</a>)."
+        keywords: ["polymer morphology", "django", "etl", "records", "database", "50000", "usm", "publication", "manuscript"],
+        response: "At the **School of Polymer Science & Engineering (USM)**, Pramish designed a full-stack Django + React platform with PostgreSQL on GCP and Firebase Hosting, giving collaborators shared, sample-level access and cutting research data sorting and retrieval time by **90%**. Python pipelines ingested and synthesized **50,000+ raw files** across **20+ active studies**, forming the basis of a manuscript currently in preparation (<a href='https://polymermorphology.org' target='_blank' style='color:var(--accent-indigo); text-decoration:underline;'>polymermorphology.org</a>)."
     },
     {
-        keywords: ["nursing", "transcript", "licensure", "textract", "board of nursing", "fraud"],
-        response: "For the **Mississippi Board of Nursing**, Pramish designed a human-in-the-loop AI verification system with AWS Lambda, Django, and Amazon Textract. It processes transcripts in 2-4 minutes using a Python engine with 13 licensure rules and strict PII isolation."
+        keywords: ["nursing", "transcript", "licensure", "textract", "board of nursing", "fraud", "bedrock", "step functions"],
+        response: "For the **Mississippi State Board of Nursing**, Pramish architected a serverless **AWS Step Functions** pipeline orchestrating API Gateway and Lambda to automate transcript processing, extracting 16 structured fields via **Amazon Textract** and **Bedrock Nova Pro**. An 18-rule Python verification engine flags academic anomalies, backed by a React SPA with append-only audit logging."
+    },
+    {
+        keywords: ["igor", "copilot", "gemini", "pywin32", "fastapi"],
+        response: "<strong>Igor Copilot</strong> is a FastAPI bridge integrating the Gemini API with Windows COM (pywin32) to automate WaveMetrics Igor Pro experimental software. It's containerized with Docker and uses strict static typing plus async testing (pytest-asyncio) for thread-safe desktop operations."
+    },
+    {
+        keywords: ["clean-slate", "expungement", "entrepreneurship", "hult prize", "co-founder", "treasurer", "leadership"],
+        response: "Pramish **co-founded Clean-Slate**, an automated legal-document platform guiding eligible individuals through criminal record expungement — raising **$1,500** in non-dilutive funding including the Hult Prize Campus Final. He also serves as **Treasurer of the USM Entrepreneurship Society**."
     },
     {
         keywords: ["skills", "technologies", "languages", "stack", "tools", "python", "frameworks"],
-        response: "Pramish's core technical stack includes:\n- **Languages:** Python, C++, TypeScript, Go, C, SQL, JavaScript\n- **AI/ML & Vision:** LangChain, PyTorch, HuggingFace, OpenCV, Prompt Engineering\n- **Backend & Cloud:** Django, FastAPI, Next.js, PostgreSQL, Docker, AWS, GCP, Vercel\n- **Specializations:** Data Governance (PII/PHI), ETL Pipelines, High-Performance Systems."
+        response: "Pramish's core technical stack includes:\n- **Languages:** Python, TypeScript, JavaScript, C++, SQL, Go\n- **AI/ML:** PyTorch, scikit-learn, XGBoost, Hugging Face, LangChain, SHAP, OpenCV, NLTK\n- **Backend & Cloud:** React, Next.js, Django, FastAPI, PostgreSQL, AWS (Lambda/Textract/Bedrock), GCP, Firebase, Docker\n- **Specializations:** Data Governance (PII/PHI), ETL Pipelines, Responsible AI Auditing."
     },
     {
-        keywords: ["education", "gpa", "degree", "university", "usm", "coursework", "presidents list"],
-        response: "Pramish is pursuing a **B.S. in Computer Science at The University of Southern Mississippi** (Jan 2024 - Present). He maintains a perfect **4.0/4.0 GPA** and has earned the **President's List for 4 consecutive semesters**."
+        keywords: ["education", "gpa", "degree", "university", "usm", "coursework", "presidents list", "scholarship"],
+        response: "Pramish is pursuing a **B.S. in Computer Science at The University of Southern Mississippi** (Expected May 2027). He maintains a perfect **4.0/4.0 GPA**, has earned the **President's List for 5 consecutive semesters**, and holds the **Academic Excellence Scholarship** (full tuition, merit-based)."
     },
     {
         keywords: ["contact", "email", "hire", "collaborate", "reach", "phone", "location", "message"],
