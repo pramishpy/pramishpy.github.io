@@ -2,6 +2,8 @@
  * Photography & Videography Dynamic Gallery Loader & Accessible Lightbox
  */
 
+import { observeReveal } from './animations.js';
+
 export async function initGallery() {
     const gallery = document.getElementById('visuals-gallery');
     if (!gallery) return;
@@ -65,6 +67,11 @@ export async function initGallery() {
 
             gallery.appendChild(figure);
         });
+
+        // Register the freshly-injected .reveal items with the shared scroll
+        // observer set up in animations.js, since initAnimations() already ran
+        // before this async fetch resolved and won't see these new elements.
+        observeReveal(gallery.querySelectorAll('.reveal'));
 
         initLightbox();
     } catch (err) {

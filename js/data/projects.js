@@ -4,17 +4,31 @@
 
 export const projectsData = [
     {
+        id: "igor-copilot",
+        title: "Igor Copilot: AI Orchestration Framework",
+        icon: "fa-flask",
+        category: "ai-llms",
+        categoryLabel: "AI & Automation",
+        featured: true,
+        summary: "FastAPI bridge integrating the Gemini API with Windows COM (pywin32) to automate and programmatically control WaveMetrics Igor Pro experimental software.",
+        highlight: "Containerized the backend with Docker and enforced strict static typing and asynchronous testing (pytest-asyncio) for thread-safe desktop operations.",
+        techStack: ["Python", "FastAPI", "Gemini API", "pywin32", "Docker", "pytest-asyncio"],
+        liveUrl: null,
+        githubUrl: "https://github.com/pramishpy/igor-copilot-frontend",
+        caseStudyUrl: null
+    },
+    {
         id: "ai-transcript-verification",
         title: "AI Transcript Verification for MS Board of Nursing",
         icon: "fa-file-medical",
         category: "ai-llms",
         categoryLabel: "AI & Systems",
         featured: true,
-        summary: "Human-in-the-loop AI system using AWS Lambda, Django, and Amazon Textract to automate nursing transcript verification, reducing document processing from days to 2-4 standardized minutes.",
-        highlight: "Engineered a Python rule engine with 13 licensure rules to detect fraud patterns with 100% decision transparency and strict PII isolation.",
-        techStack: ["AWS Lambda", "Django", "Amazon Textract", "Python", "React", "Human-in-the-Loop", "PII Security"],
-        liveUrl: "https://d3sdke4b9dybsk.cloudfront.net",
-        githubUrl: null,
+        summary: "Serverless AWS Step Functions pipeline orchestrating API Gateway and Lambda to automate PDF transcript processing, extracting 16 structured academic fields via Amazon Textract and Bedrock Nova Pro.",
+        highlight: "Engineered an 18-rule deterministic Python verification engine combined with Bedrock AI analysis to flag academic anomalies and fraud indicators, backed by a React SPA with append-only audit logging.",
+        techStack: ["AWS Step Functions", "API Gateway", "Amazon Textract", "Bedrock Nova Pro", "Lambda", "Python", "React"],
+        liveUrl: null,
+        githubUrl: "https://github.com/MSITS-AI-Innovation-Hub/TeamSP-USM-MSBON-07",
         caseStudyUrl: null
     },
     {
