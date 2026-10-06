@@ -153,6 +153,8 @@
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--surface-glass-border);
     color: var(--text-muted);
+    max-width: 100%;
+    word-break: break-word;
 }
 
 :root[data-theme="light"] .timeline-tag {
@@ -177,20 +179,48 @@
     color: var(--accent-emerald);
     font-size: var(--text-xs);
     font-weight: var(--weight-semibold);
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.35;
 }
 
 @media (max-width: 640px) {
     .timeline-container {
-        padding-left: 2rem;
+        padding-left: 1.75rem;
     }
     
     .timeline-marker {
-        left: -2rem;
-        width: 14px;
-        height: 14px;
+        left: -1.75rem;
+        width: 12px;
+        height: 12px;
     }
     
     .timeline-card {
-        padding: 1.5rem;
+        padding: 1.35rem 1rem;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+
+    .timeline-role {
+        font-size: var(--text-base);
+        word-break: break-word;
+    }
+
+    .timeline-company {
+        font-size: var(--text-xs);
+        margin-bottom: 0.75rem;
+    }
+
+    .timeline-bullet {
+        font-size: var(--text-xs);
+    }
+
+    .timeline-tags {
+        gap: 0.35rem;
     }
 }

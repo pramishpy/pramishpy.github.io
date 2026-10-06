@@ -52,6 +52,11 @@ export function initNavigation() {
         });
     }
 
+    const drawerCloseBtn = document.getElementById('mobile-drawer-close');
+    if (drawerCloseBtn) {
+        drawerCloseBtn.addEventListener('click', closeDrawer);
+    }
+
     if (drawerBackdrop) {
         drawerBackdrop.addEventListener('click', closeDrawer);
     }

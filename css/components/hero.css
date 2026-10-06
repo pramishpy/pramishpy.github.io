@@ -55,11 +55,12 @@
 
 /* Headline */
 .hero-name {
-    font-size: clamp(2.5rem, 5.5vw, 4rem);
+    font-size: clamp(2rem, 7vw, 4rem);
     font-weight: var(--weight-extrabold);
     letter-spacing: -0.035em;
     line-height: 1.08;
     margin-bottom: 1rem;
+    word-break: break-word;
     background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -350,5 +351,101 @@
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--nav-height) + 1.5rem);
+        padding-bottom: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: var(--text-sm);
+        line-height: 1.65;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .terminal-header {
+        padding: 0.6rem 0.75rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .terminal-controls {
+        order: 1;
+    }
+
+    .terminal-actions {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .terminal-tabs {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding-top: 0.35rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .terminal-tab-btn {
+        flex-shrink: 0;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .terminal-body {
+        padding: 0.85rem 0.75rem;
+        font-size: 0.75rem;
+        min-height: 220px;
+        max-height: 300px;
+    }
+
+    .code-line {
+        min-width: 0;
+        gap: 0.5rem;
+    }
+
+    .line-content {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-role {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        font-size: var(--text-xs);
+    }
+
+    .hero-role-separator {
+        display: none;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+    }
+
+    .hero-socials {
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .social-pill {
+        padding: 0.35rem 0.65rem;
+        font-size: 0.72rem;
     }
 }

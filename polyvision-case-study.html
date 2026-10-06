@@ -143,6 +143,47 @@
                 padding: 1.5rem;
             }
         }
+        @media (max-width: 640px) {
+            .case-study-hero {
+                padding-top: calc(var(--nav-height) + 1.5rem);
+                padding-bottom: 2rem;
+            }
+            .case-study-title {
+                font-size: clamp(1.75rem, 6.5vw, 2.5rem);
+            }
+            .case-study-lead {
+                font-size: var(--text-base);
+                margin-bottom: 1.75rem;
+            }
+            .case-study-stats-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+                margin-bottom: 2.5rem;
+            }
+            .case-study-section {
+                padding: 1.25rem 1rem;
+            }
+            .case-study-actions {
+                flex-direction: column;
+                gap: 0.75rem;
+                margin-top: 2.5rem;
+            }
+            .case-study-actions .btn {
+                width: 100%;
+            }
+            .case-study-back-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.35rem;
+                padding: 0.4rem 0.75rem;
+                font-size: var(--text-xs);
+                font-weight: var(--weight-semibold);
+                border-radius: var(--radius-full);
+                background: var(--surface-glass);
+                border: 1px solid var(--surface-glass-border);
+                color: var(--text-primary);
+            }
+        }
     </style>
 </head>
 <body>
@@ -174,8 +215,8 @@
                     <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle theme" title="Toggle theme">
                         <i class="fas fa-sun theme-toggle-icon" aria-hidden="true"></i>
                     </button>
-                    <a href="index.html#projects" class="nav-cta">
-                        <i class="fas fa-arrow-left"></i> All Projects
+                    <a href="index.html#projects" class="case-study-back-link btn-secondary" aria-label="Back to Projects">
+                        <i class="fas fa-arrow-left"></i> <span>Projects</span>
                     </a>
                 </div>
             </div>

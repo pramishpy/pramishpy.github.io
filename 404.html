@@ -71,6 +71,21 @@
             margin-bottom: 2rem;
             line-height: 1.6;
         }
+        @media (max-width: 640px) {
+            .error-wrapper {
+                padding: 1rem;
+            }
+            .error-card {
+                padding: 2.25rem 1.25rem;
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            .error-card .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -85,7 +100,7 @@
             <p class="error-desc">
                 The resource or pathway you are looking for has been relocated, archived, or does not exist in this repository.
             </p>
-            <div class="flex justify-center gap-4">
+            <div class="flex justify-center gap-4 flex-wrap">
                 <a href="index.html" class="btn btn-primary">
                     <i class="fas fa-house"></i> Back to Home
                 </a>
